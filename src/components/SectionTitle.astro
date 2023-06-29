@@ -1,0 +1,31 @@
+---
+export interface props {
+    title: string;
+    subText?: string;
+}
+
+const { title, subText } = Astro.props as props;
+---
+
+<div class="text-center pb-14">
+    <h2 class="mb-2 text-3xl text-center font-bold relative">{title}</h2>
+    {subText && <p class="mb-0">{subText}</p>}
+</div>
+
+<style>
+    h2:before,
+    h2:after {
+        content: "";
+        width: 50px;
+        height: 2px;
+        display: inline-block;
+        @apply bg-primary;
+    }
+    h2:before {
+        margin: 0 15px 10px 0;
+    }
+
+    h2:after {
+        margin: 0 0 10px 15px;
+    }
+</style>

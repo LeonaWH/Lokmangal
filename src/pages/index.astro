@@ -1,81 +1,82 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+// fontawesome
+import "../assets/vendors/fontawesome/all.min.css";
+// components
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Section from "../components/Section.astro";
+import AboutCard from "../components/AboutCard.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
+<Layout>
+	<Navbar />
+
+	<div id="hero"></div>
+
+	<Section
+		title="About Us"
+		titleSubText="There are many variations of passages of Lorem Ipsum available, but the majority have"
+	>
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+			<div>
+				<p>
+					Lokmangal stands for the total development of people.
+					Lokmangal is a non-profitable social organization born out
+					of the concept of holistic health of women and the
+					comprehensive development of the rural people and from their
+					struggles to achieve these goals. The organization works
+					preserving the eternal truth of equality, socialjustice and
+					brotherhood. Respect for one another, national integration,
+					unity in diversity are the basic principles the organization
+					upholds.
+				</p>
+			</div>
+			<div class="placeholder"></div>
+			<AboutCard title="Vision" icon="fa-solid fa-eye">
+				<p>
+					A prosperous community where women enjoy holistic health and
+					every individual lives with dignity that leads to a society
+					free from injustice, exploitation and corruption, giving way
+					to equality, social justice and harmony
+				</p>
+			</AboutCard>
+			<AboutCard title="Mission" icon="fa-brands fa-get-pocket">
+				<ol class="list-decimal">
+					<li>
+						To empower women, making them centre of development.
+					</li>
+					<li>
+						To bring about sustainable village development through
+						local leadership and people’s organization.
+					</li>
+				</ol>
+			</AboutCard>
+		</div>
+	</Section>
+
+	<Section
+		title="Objectives"
+		titleSubText="There are many variations of passages of Lorem Ipsum available, but the majority have"
+	>
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde totam
+		voluptatibus quam at, sit praesentium non voluptate aspernatur optio?
+		Incidunt quia nihil, fugit perspiciatis omnis aperiam totam maiores
+		tempore, eligendi, ullam quam. Veniam explicabo ex delectus fuga
+		corrupti temporibus. Enim, est quod praesentium velit temporibus sed
+		reiciendis cumque at. Vero?
+	</Section>
 </Layout>
 
+<!-- Temp Styles -->
 <style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
+	#hero {
+		height: 80vh;
+		width: 100%;
+		@apply bg-secondary;
 	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
+	.placeholder {
+		height: 100%;
+		width: 100%;
+		background-color: grey;
 	}
 </style>
