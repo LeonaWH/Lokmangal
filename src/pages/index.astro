@@ -9,13 +9,16 @@ import AboutCard from "../components/AboutCard.astro";
 import Objective from "../components/Objective.astro";
 
 // icons
-import Care from "../assets/images/care.svg";
-import Just from "../assets/images/social.svg";
-import Together from "../assets/images/together.svg";
-import Eco from "../assets/images/eco.svg";
-import Rights from "../assets/images/rights.svg";
-import Participation from "../assets/images/participation.svg";
-import Welfare from "../assets/images/welfare.svg";
+
+import {
+	Care,
+	Eco,
+	Just,
+	Participation,
+	Rights,
+	Together,
+	Welfare,
+} from "../assets/images/icons";
 ---
 
 <Layout>
@@ -68,44 +71,44 @@ import Welfare from "../assets/images/welfare.svg";
 		title="Objectives"
 		titleSubText="There are many variations of passages of Lorem Ipsum available, but the majority have"
 	>
-    <div class="flex flex-wrap justify-center md:gap-x-4 lg:gap-x-12 md:gap-y-4 w-full">
-      <Objective 
-        content="To address women’s issues, through systematic capacity building and by formation of women’s organization."
-        icon={Together}
-      />
+		<div
+			class="flex flex-wrap justify-center md:gap-x-4 lg:gap-x-12 md:gap-y-4 w-full"
+		>
+			<Objective
+				content="To address women’s issues, through systematic capacity building and by formation of women’s organization."
+				icon={Together}
+			/>
 
-      <Objective 
-        content="To provide legal assistance to fight for social justice and human rights."
-        icon={Just}
-      />
+			<Objective
+				content="To provide legal assistance to fight for social justice and human rights."
+				icon={Just}
+			/>
 
-      <Objective 
-        content="To increase the active participation of women in the gramsabha and in the process of development and decision making."
-        icon={Participation}
-      />
+			<Objective
+				content="To increase the active participation of women in the gramsabha and in the process of development and decision making."
+				icon={Participation}
+			/>
 
-      <Objective 
-        content="To strengthen the right based movements through local leadership and people’s organization."
-        icon={Rights}
-      />
+			<Objective
+				content="To strengthen the right based movements through local leadership and people’s organization."
+				icon={Rights}
+			/>
 
-      <Objective 
-        content="To provide care and protection to women and children who are trapped in the moral, social, or familial problems and rehabilitate them to lead a healthy life."
-        icon={Care}
-      />
+			<Objective
+				content="To provide care and protection to women and children who are trapped in the moral, social, or familial problems and rehabilitate them to lead a healthy life."
+				icon={Care}
+			/>
 
-      <Objective 
-        content="To motivate people for collective responsibility in promoting environment and bio-diversity and its proper management."
-        icon={Eco}
-      />
+			<Objective
+				content="To motivate people for collective responsibility in promoting environment and bio-diversity and its proper management."
+				icon={Eco}
+			/>
 
-      <Objective 
-        content="To improve the living conditions and health status of the rural poor, conduct community health activities, and social welfare programs."
-        icon={Welfare}
-      />
-
-    </div>
-    
+			<Objective
+				content="To improve the living conditions and health status of the rural poor, conduct community health activities, and social welfare programs."
+				icon={Welfare}
+			/>
+		</div>
 	</Section>
 	<Section
 		className="bg-secondary"
