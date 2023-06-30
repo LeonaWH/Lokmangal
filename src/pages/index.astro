@@ -1,13 +1,10 @@
 ---
-// fontawesome
-import "../assets/vendors/fontawesome/all.min.css";
 // components
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import Section from "../components/Section.astro";
 import AboutCard from "../components/AboutCard.astro";
 import Objective from "../components/Objective.astro";
-
 // icons
 
 import {
@@ -112,26 +109,44 @@ import {
 	</Section>
 	<Section
 		className="bg-secondary"
-		title="Government Sposored Programs"
+		title="Government Sponsored Programs"
 		titleSubText="There are many variations of passages of Lorem Ipsum available, but the majority have"
 	>
 		<div class="grid grid-flow-row lg:grid-flow-col">
-			<div class="flex lg:flex-col justify-between">
-				<button class="bg-primary text-white text-">Program 1</button>
-				<button>Program 2</button>
-				<button>Program 3</button>
+			<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-1 lg:w-40">
+				<button class="program-btn active">
+					Mathoshri Swadhar greh
+				</button>
+				<button class="program-btn">Ahilyadevi Balsadan</button>
+				<button class="program-btn">Legal Aid</button>
+				<button class="program-btn">Community Development</button>
 			</div>
-			<div class="grid grid-flow-row lg:grid-flow-col">
-				<div class="program-content">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit.
-					Odio a animi sed, enim provident maxime doloremque culpa
-					dicta similique aperiam voluptas deleniti commodi quae
-					dolore debitis, id eveniet sit esse impedit minus. Velit
-					odio placeat magnam, non dignissimos laborum. Dolor
-					obcaecati voluptatem ipsam quasi sint perferendis
-					reprehenderit necessitatibus, ut vel.
+			<div class="grid grid-flow-row lg:grid-flow-col mt-3">
+				<div class="program-content lg:mr-10">
+					<h3 class="text-2xl font-semibold mb-3">
+						Mathoshri Swadhar greh for women in distress:
+					</h3>
+					<ol>
+						<li>
+							Provide shelter and support to women who are bearing
+							the brunt of social, moral and family problems and
+							violence.
+						</li>
+						<li>
+							Individual and family counseling, legal assistance,
+							vocational training, formal & non-formal education,
+							personality development and social awareness
+							programs by which they are rehabilitated to lead a
+							healthy normal life and get back in to the main
+							stream of the society.
+						</li>
+						<li>
+							The inmates of this home are provided all the
+							facilities free of cost.
+						</li>
+					</ol>
 				</div>
-				<div class="program-images bg-white">
+				<div class="placeholder">
 					Lorem ipsum dolor, sit amet consectetur adipisicing elit.
 					Cumque unde expedita accusamus odio aspernatur, ab totam ea
 					quisquam omnis dolorem animi excepturi in fuga quidem,
@@ -156,5 +171,27 @@ import {
 		height: 100%;
 		width: 100%;
 		background-color: grey;
+	}
+
+	.program-btn {
+		background-color: black;
+		color: white;
+		@apply rounded-md;
+	}
+	.program-btn.active {
+		@apply bg-primary;
+	}
+	@media screen and (max-width: 768px) {
+		.program-btn {
+			padding: 0.5rem 1.25rem;
+			margin-right: 0.75rem;
+			margin-bottom: 0.75rem;
+		}
+	}
+	@media screen and (min-width: 1024px) {
+		.program-btn {
+			padding: 0.75rem 0rem;
+			margin: 0.75rem 1.5rem 0.75rem 0px;
+		}
 	}
 </style>
