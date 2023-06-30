@@ -1,0 +1,17 @@
+---
+interface props {
+    content: string;
+    icon: string;
+}
+const { content, icon } = Astro.props as props;
+---
+
+<div
+    class="flex items-center gap-4 md:gap-8 justify-start border-t-2 border-slate-300 border-solid shadow-sm w-full md:max-w-[47%] px-2 lg:px-10 py-12"
+>
+    <!-- <slot name="icon" /> -->
+    <div class="border-2 md:border-4 border-solid border-primary w-auto aspect-square rounded-full p-4">
+      <img class="w-24 md:w-32 aspect-square" src={icon} />
+    </div>
+    <p class="font-regular text-base">{content}</p>
+</div>
