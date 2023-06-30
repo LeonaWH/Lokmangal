@@ -6,6 +6,7 @@ import Section from "../components/Section.astro";
 import AboutCard from "../components/AboutCard.astro";
 import Objective from "../components/Objective.astro";
 import Program from "../components/Program.astro";
+import ContactCard from "../components/ContactCard.astro";
 // icons
 
 import {
@@ -296,6 +297,90 @@ import {
 					excepturi ullam.
 				</div>
 			</Program>
+		</div>
+	</Section>
+
+	<Section
+		title="Contact Us"
+		titleSubText="We network with like minded NGOs, people’s movements and individuals on various issues"
+	>
+		<div
+			class="flex flex-col-reverse justify-center lg:flex-row lg:align-start gap-4"
+		>
+			<!-- outer-flex -->
+			<div class="mx-auto w-full max-w-[550px]">
+				<form action="#" method="POST">
+					<div class="mb-5">
+						<input
+							type="text"
+							name="name"
+							id="name"
+							placeholder="Full Name"
+							class="w-full rounded-md border border-slate-300 bg-white py-3 px-6 text-base font-medium text-slate-700 outline-none focus:border-tertiary focus:shadow-md"
+						/>
+					</div>
+					<div class="mb-5">
+						<input
+							type="email"
+							name="email"
+							id="email"
+							placeholder="example@domain.com"
+							class="w-full rounded-md border border-slate-300 bg-white py-3 px-6 text-base font-medium text-slate-700 outline-none focus:border-tertiary focus:shadow-md"
+						/>
+					</div>
+					<div class="mb-5">
+						<input
+							type="text"
+							name="subject"
+							id="subject"
+							placeholder="Enter your subject"
+							class="w-full rounded-md border border-slate-300 bg-white py-3 px-6 text-base font-medium text-slate-700 outline-none focus:border-tertiary focus:shadow-md"
+						/>
+					</div>
+					<div class="mb-5">
+						<textarea
+							rows="4"
+							name="message"
+							id="message"
+							placeholder="Type your message"
+							class="w-full resize-none rounded-md border border-slate-300 bg-white py-3 px-6 text-base font-medium text-slate-700 outline-none focus:border-tertiary focus:shadow-md"
+						></textarea>
+					</div>
+					<div>
+						<button
+							class="hover:shadow-form rounded-md bg-primary py-3 px-8 text-base font-semibold text-white outline-none"
+						>
+							Submit
+						</button>
+					</div>
+				</form>
+			</div>
+			<div class="flex flex-col gap-8">
+				<div class="flex flex-col md:flex-row justify-between gap-8">
+					<ContactCard title="Call Us" icon="fa-solid fa-phone">
+						<ol class="list-none text-sm">
+							<li class="pb-2">9892494784</li>
+							<li>9637415885</li>
+						</ol>
+					</ContactCard>
+					<ContactCard title="Email" icon="fa-solid fa-envelope">
+						<ol class="list-none text-sm">
+							<li>lokmangalghot@gmail.com</li>
+						</ol>
+					</ContactCard>
+				</div>
+				<div>
+					<ContactCard title="Address" icon="fa-solid fa-map-pin">
+						<ol class="list-none text-sm">
+							<li class="pb-2">Lokmangal Sanstha, Ghot. P.O.,</li>
+							<li class="pb-2">
+								Th. Chamorshi. Dt. Gadachiroli, 442-604;
+							</li>
+							<li>Maharashtra,India</li>
+						</ol>
+					</ContactCard>
+				</div>
+			</div>
 		</div>
 	</Section>
 </Layout>
