@@ -5,12 +5,15 @@ export interface props {
     id: string;
     title: string;
     titleSubText?: string;
+    className?: string;
 }
 
-const { id, title, titleSubText } = Astro.props as props;
+const { id, title, titleSubText, className } = Astro.props as props;
 ---
 
-<section id={id} class="container mx-auto px-8 md:px-12 lg:px-24 py-14">
-    <SectionTitle title={title} subText={titleSubText} />
-    <slot />
+<section id={id} class={"px-8 md:px-12 lg:px-24 py-14 " + className}>
+    <div class="container mx-auto">
+        <SectionTitle title={title} subText={titleSubText} />
+        <slot />
+    </div>
 </section>
