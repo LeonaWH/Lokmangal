@@ -1,0 +1,27 @@
+---
+export interface props {
+    title: string;
+    id: string;
+    className?: string;
+}
+const { title, id, className = "" } = Astro.props as props;
+---
+
+<div
+    class={"program grid grid-flow-row lg:grid-flow-col mt-3 " + className}
+    id={id}
+>
+    <div class="program-content lg:mr-10">
+        <h3 class="test text-2xl font-semibold mb-3">
+            {title}
+        </h3>
+        <slot name="content" />
+    </div>
+    <slot />
+</div>
+
+<style>
+    .program {
+        transition: all 0.5s ease-in-out;
+    }
+</style>

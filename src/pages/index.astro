@@ -5,6 +5,7 @@ import Navbar from "../components/Navbar.astro";
 import Section from "../components/Section.astro";
 import AboutCard from "../components/AboutCard.astro";
 import Objective from "../components/Objective.astro";
+import Program from "../components/Program.astro";
 // icons
 
 import {
@@ -107,44 +108,95 @@ import {
 			/>
 		</div>
 	</Section>
+
 	<Section
 		className="bg-secondary"
 		title="Government Sponsored Programs"
 		titleSubText="There are many variations of passages of Lorem Ipsum available, but the majority have"
 	>
 		<div class="grid grid-flow-row lg:grid-flow-col">
-			<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-1 lg:w-40">
-				<button class="program-btn active">
+			<!-- Buttons -->
+			<div
+				class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-1 lg:w-40 lg:h-[10%]"
+			>
+				<button value="prog-1" class="program-btn active">
 					Mathoshri Swadhar greh
 				</button>
-				<button class="program-btn">Ahilyadevi Balsadan</button>
-				<button class="program-btn">Legal Aid</button>
-				<button class="program-btn">Community Development</button>
+				<button value="prog-2" class="program-btn">
+					Ahilyadevi Balsadan
+				</button>
+				<button value="prog-3" class="program-btn">Legal Aid</button>
+				<button value="prog-4" class="program-btn">
+					Community Development
+				</button>
 			</div>
-			<div class="grid grid-flow-row lg:grid-flow-col mt-3">
-				<div class="program-content lg:mr-10">
-					<h3 class="text-2xl font-semibold mb-3">
-						Mathoshri Swadhar greh for women in distress:
-					</h3>
+
+			<!-- Content -->
+			<Program
+				id="prog-1"
+				title="Mathoshri Swadhar greh for women in distress:"
+			>
+				<ol slot="content">
+					<li>
+						Provide shelter and support to women who are bearing the
+						brunt of social, moral and family problems and violence.
+					</li>
+					<li>
+						Individual and family counseling, legal assistance,
+						vocational training, formal & non-formal education,
+						personality development and social awareness programs by
+						which they are rehabilitated to lead a healthy normal
+						life and get back in to the main stream of the society.
+					</li>
+					<li>
+						The inmates of this home are provided all the facilities
+						free of cost.
+					</li>
+				</ol>
+				<div class="placeholder">
+					Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+					Cumque unde expedita accusamus odio aspernatur, ab totam ea
+					quisquam omnis dolorem animi excepturi in fuga quidem,
+					distinctio, minima nemo? Dolorum non voluptates quia rerum
+					nam accusantium obcaecati eaque hic asperiores sapiente illo
+					delectus commodi odio, a magnam perferendis ducimus rem
+					nemo.
+				</div>
+			</Program>
+
+			<Program
+				id="prog-2"
+				title="Ahilyadevi Balsadan:"
+				className="hidden opacity-0"
+			>
+				<div slot="content">
+					<p>
+						To prepare the less privileged children as responsible
+						future citizens.
+					</p>
 					<ol>
 						<li>
-							Provide shelter and support to women who are bearing
-							the brunt of social, moral and family problems and
-							violence.
+							A home away from home children- orphan, nobody to
+							support, in moral danger- who are in need of care
+							and protection.
 						</li>
 						<li>
-							Individual and family counseling, legal assistance,
-							vocational training, formal & non-formal education,
-							personality development and social awareness
-							programs by which they are rehabilitated to lead a
-							healthy normal life and get back in to the main
-							stream of the society.
+							These children are given care and protection,
+							education and bring them up in a family atmosphere,
+							children between the age of 6- 18 are given
+							admission in this home.
 						</li>
 						<li>
-							The inmates of this home are provided all the
-							facilities free of cost.
+							Besides formal education they are given vocational
+							trainings, programs for personality development and
+							social awareness, training in Karate, are part of
+							this home.
 						</li>
 					</ol>
+					<p>
+						Sponsored by women and child welfare Dept. state of
+						Maharashtra.
+					</p>
 				</div>
 				<div class="placeholder">
 					Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -155,10 +207,118 @@ import {
 					delectus commodi odio, a magnam perferendis ducimus rem
 					nemo.
 				</div>
-			</div>
+			</Program>
+
+			<Program id="prog-3" title="Legal Aid" className="hidden opacity-0">
+				<div slot="content">
+					<ol>
+						<li>
+							The Centre stand by women to fight against
+							atrocities and violence against them and to fight
+							for their rights.
+						</li>
+						<li>
+							provide legal assistance for women, tribals and
+							other vulnerable people through legal litigation.
+						</li>
+						<li>
+							Provide legal awareness and education to people
+							about day to day useful and basic laws.
+						</li>
+					</ol>
+					<p>
+						Bring to the compromising table the matrimonial disputes
+						and settle them with the consent of both the parties.
+					</p>
+				</div>
+				<div class="placeholder">
+					Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+					Molestias recusandae dolorum excepturi inventore quam,
+					dolorem qui molestiae veritatis? Facilis expedita libero
+					perferendis at cupiditate ipsam ea quidem quibusdam hic.
+					Veritatis sint odit reprehenderit nam, explicabo, a sunt
+					quaerat excepturi distinctio deserunt perferendis. Sapiente
+					cumque molestiae facere nulla adipisci, ratione quos.
+				</div>
+			</Program>
+
+			<Program
+				id="prog-4"
+				title="Comprehensive Community Development programs:"
+				className="hidden opacity-0"
+			>
+				<div slot="content">
+					<p>
+						With the intension that the people take up the
+						responsibility for development and administration of
+						justice in the community and in that process women take
+						active participation and leadership, the organization
+						works to create awareness, motivation and capacity
+						building program to people at grass root level.
+					</p>
+					<ol>
+						<li>
+							Through women self-help groups and panchayati raj
+							programs develop capacities of women and empower
+							them.
+						</li>
+						<li>
+							To empower gramsabha through active participation of
+							people in decision making, planning, implementation
+							and control of natural resources and development
+							programs.
+						</li>
+						<li>
+							To improve the community health with special focus
+							on mother and infant care.
+						</li>
+						<li>
+							Generate employment for sustainable livelihood by
+							proper management through community participation.
+						</li>
+						<li>
+							Environment protection, promotion and bio- diversity
+							management through community participation.
+						</li>
+						<li>
+							To encourage the traditional and proper use of home
+							remedies and herbal medicines.
+						</li>
+					</ol>
+				</div>
+				<div class="placeholder">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit.
+					Officia eos dicta minus fugit incidunt omnis error!
+					Temporibus sapiente consectetur modi quos quia! Voluptate
+					corporis ipsa, saepe temporibus itaque ea illum delectus
+					sint modi at ipsum cum culpa! Quam nisi cumque beatae
+					dolorem tempora aliquam pariatur est commodi porro,
+					excepturi ullam.
+				</div>
+			</Program>
 		</div>
 	</Section>
 </Layout>
+
+<script>
+	const programBtns = document.querySelectorAll(".program-btn");
+	programBtns.forEach((btn) => {
+		btn.addEventListener("click", (e: Event) => {
+			programBtns.forEach((btn) => btn.classList.remove("active"));
+			(e.target as HTMLElement).classList.add("active");
+			const program = (e.target as HTMLButtonElement).value;
+			const programs = document.querySelectorAll(".program");
+			programs.forEach((program) =>
+				program.classList.add("hidden", "opacity-0")
+			);
+			const programElement = document.querySelector(
+				`.program#${program}`
+			)!;
+			programElement.classList.remove("hidden");
+			setTimeout(() => programElement.classList.remove("opacity-0"), 1);
+		});
+	});
+</script>
 
 <!-- Temp Styles -->
 <style>
