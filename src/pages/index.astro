@@ -44,7 +44,7 @@ import {
 					upholds.
 				</p>
 			</div>
-			<div class="placeholder"></div>
+			<div class="placeholder rounded-md"></div>
 			<AboutCard title="Vision" icon="fa-solid fa-eye">
 				<p class="text-left">
 					A prosperous community where women enjoy holistic health and
@@ -122,7 +122,7 @@ import {
 				class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-1 lg:w-40 lg:h-[10%]"
 			>
 				<button value="prog-1" class="program-btn active">
-					Mathoshri Swadhar greh
+					Mathoshri Swadhar Greh
 				</button>
 				<button value="prog-2" class="program-btn">
 					Ahilyadevi Balsadan
@@ -136,7 +136,7 @@ import {
 			<!-- Content -->
 			<Program
 				id="prog-1"
-				title="Mathoshri Swadhar greh for women in distress:"
+				title="Mathoshri Swadhar Greh for women in distress:"
 			>
 				<ol slot="content">
 					<li>
@@ -155,7 +155,7 @@ import {
 						free of cost.
 					</li>
 				</ol>
-				<div class="placeholder">
+				<div class="placeholder rounded-md">
 					Lorem ipsum dolor, sit amet consectetur adipisicing elit.
 					Cumque unde expedita accusamus odio aspernatur, ab totam ea
 					quisquam omnis dolorem animi excepturi in fuga quidem,
@@ -200,7 +200,7 @@ import {
 						Maharashtra.
 					</p>
 				</div>
-				<div class="placeholder">
+				<div class="placeholder rounded-md">
 					Lorem ipsum dolor, sit amet consectetur adipisicing elit.
 					Cumque unde expedita accusamus odio aspernatur, ab totam ea
 					quisquam omnis dolorem animi excepturi in fuga quidem,
@@ -233,7 +233,7 @@ import {
 						and settle them with the consent of both the parties.
 					</p>
 				</div>
-				<div class="placeholder">
+				<div class="placeholder rounded-md">
 					Lorem ipsum dolor sit amet consectetur, adipisicing elit.
 					Molestias recusandae dolorum excepturi inventore quam,
 					dolorem qui molestiae veritatis? Facilis expedita libero
@@ -288,7 +288,7 @@ import {
 						</li>
 					</ol>
 				</div>
-				<div class="placeholder">
+				<div class="placeholder rounded-md">
 					Lorem ipsum dolor sit amet consectetur adipisicing elit.
 					Officia eos dicta minus fugit incidunt omnis error!
 					Temporibus sapiente consectetur modi quos quia! Voluptate
@@ -325,7 +325,7 @@ import {
 							type="email"
 							name="email"
 							id="email"
-							placeholder="example@domain.com"
+							placeholder="Enter your email (example@domain.com)"
 							class="w-full rounded-md border border-slate-300 bg-white py-3 px-6 text-base font-medium text-slate-700 outline-none focus:border-tertiary focus:shadow-md"
 						/>
 					</div>
@@ -343,7 +343,7 @@ import {
 							rows="4"
 							name="message"
 							id="message"
-							placeholder="Type your message"
+							placeholder="Enter your message"
 							class="w-full resize-none rounded-md border border-slate-300 bg-white py-3 px-6 text-base font-medium text-slate-700 outline-none focus:border-tertiary focus:shadow-md"
 						></textarea>
 					</div>
@@ -371,20 +371,22 @@ import {
 					</ContactCard>
 				</div>
 				<div>
-					<ContactCard title="Address" icon="fa-solid fa-map-pin">
+					<ContactCard title="Address" icon="fa-solid fa-location-dot">
 						<ol class="list-none text-sm">
 							<li class="pb-2">Lokmangal Sanstha, Ghot. P.O.,</li>
 							<li class="pb-2">
 								Th. Chamorshi. Dt. Gadachiroli, 442-604;
 							</li>
-							<li>Maharashtra,India</li>
+							<li>Maharashtra, India</li>
 						</ol>
 					</ContactCard>
 				</div>
 			</div>
 		</div>
 	</Section>
+	<button id="scrollBtn" title="Go to top"> <i class="fa-solid fa-angles-up fa-md" style="color: #ffffff;"></i></button>
 	<Footer />
+	
 </Layout>
 
 <script>
@@ -405,6 +407,26 @@ import {
 			setTimeout(() => programElement.classList.remove("opacity-0"), 1);
 		});
 	});
+
+	// Get the button:
+	const mybutton = document.getElementById("scrollBtn")!;
+
+	// When the user scrolls down 20px from the top of the document, show the button
+	window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+ 	 if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+ 	   mybutton.style.display = "block";
+ 	 } else {
+  	  mybutton.style.display = "none";
+ 	 }
+	}
+
+	// When the user clicks on the button, scroll to the top of the document
+	document.getElementById("scrollBtn")!.onclick = function topFunction() {
+  		document.body.scrollTop = 0; // For Safari
+  		document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+	}
 </script>
 
 <!-- Temp Styles -->
@@ -441,4 +463,24 @@ import {
 			margin: 0.75rem 1.5rem 0.75rem 0px;
 		}
 	}
+
+	#scrollBtn {
+    display: none;
+    position: fixed; 
+    bottom: 20px; 
+    right: 30px; 
+    z-index: 99;
+    border: none; 
+    outline: none; 
+    background-color:#FC5D35; 
+    color: white; 
+    cursor: pointer; 
+    padding: 0.5rem; 
+    border-radius: 0.5rem;
+  }
+  
+  #scrollBtn:hover {
+    background-color: #262626;
+  }
+
 </style>
