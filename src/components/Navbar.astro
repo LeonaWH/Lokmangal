@@ -1,5 +1,6 @@
 ---
 import logo from "../assets/images/logo.png";
+import { Hamburger } from "../assets/images/icons";
 ---
 
 <div
@@ -12,10 +13,10 @@ import logo from "../assets/images/logo.png";
             class="text-primary flex items-center text-lg md:text-xl font-bold"
         >
             <img class="h-12 mr-2 md:mr-4" src={logo} alt="Lokmangal Logo" />
-            Lokmangal
+            <!-- Lokmangal -->
         </a>
         <button class="lg:hidden" id="hamburgerBtn">
-            <i class="fa-solid fa-bars"></i>
+            <img class="h-8" src={Hamburger} alt="" />
         </button>
     </div>
     <nav class="lg:block">
