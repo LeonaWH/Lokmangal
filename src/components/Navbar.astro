@@ -74,7 +74,7 @@ import { Hamburger } from "../assets/images/icons";
         }
     }
     @media screen and (min-width: 1024px) {
-        .nav-link.active a::after {
+        .nav-link a::after {
             position: absolute;
             content: "";
             left: 50%;
@@ -82,7 +82,12 @@ import { Hamburger } from "../assets/images/icons";
             width: 40px;
             height: 2px;
             margin-left: -20px;
+            transform: scaleX(0);
+            transition: transform 0.5s ease-in-out;
             @apply bg-primary;
+        }
+        .nav-link.active a::after {
+            transform: scaleX(1);
         }
     }
 </style>
