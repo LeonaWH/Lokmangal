@@ -449,7 +449,7 @@ import {
 			margin-bottom: 0.75rem;
 		}
 	}
-	@media screen and (min-width: 1024px) {
+	@media screen and (min-width: 768px) {
 		.program-btn {
 			padding: 0.75rem 0rem;
 			margin: 0.75rem 1.5rem 0.75rem 0px;
@@ -480,47 +480,4 @@ import {
 	}
 </style>
 
-<script>
-	const programBtns = document.querySelectorAll(".program-btn");
-	programBtns.forEach((btn) => {
-		btn.addEventListener("click", (e: Event) => {
-			programBtns.forEach((btn) => btn.classList.remove("active"));
-			(e.target as HTMLElement).classList.add("active");
-			const program = (e.target as HTMLButtonElement).value;
-			const programs = document.querySelectorAll(".program");
-			programs.forEach((program) =>
-				program.classList.add("hidden", "opacity-0")
-			);
-			const programElement = document.querySelector(
-				`.program#${program}`
-			)!;
-			programElement.classList.remove("hidden");
-			setTimeout(() => programElement.classList.remove("opacity-0"), 1);
-		});
-	});
-
-	// Get the button:
-	const mybutton = document.getElementById("scrollBtn")!;
-
-	// When the user scrolls down 20px from the top of the document, show the button
-	window.onscroll = scrollFunction;
-
-	function scrollFunction() {
-		if (
-			document.body.scrollTop > 20 ||
-			document.documentElement.scrollTop > 20
-		) {
-			mybutton.style.display = "block";
-			setTimeout(() => (mybutton.style.transform = "scaleY(1)"), 1);
-		} else {
-			mybutton.style.transform = "scaleY(0)";
-			setTimeout(() => (mybutton.style.display = "none"), 1000);
-		}
-	}
-
-	// When the user clicks on the button, scroll to the top of the document
-	document.getElementById("scrollBtn")!.onclick = () => {
-		document.body.scrollTop = 0; // For Safari
-		document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-	};
-</script>
+<script src="../scripts/"/>
