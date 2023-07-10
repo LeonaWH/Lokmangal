@@ -1,0 +1,45 @@
+---
+// Swiper CSS
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+---
+
+<div class="swiper">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        <slot />
+        <!-- <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div> -->
+        ...
+    </div>
+
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+</div>
+
+<style>
+    .swiper {
+        width: 600px;
+        height: 300px;
+    }
+</style>
+
+<script>
+    // Swiper
+    import Swiper from "swiper";
+    import { Navigation, Pagination } from "swiper/modules";
+    Swiper.use([Navigation, Pagination]);
+    const swiper = new Swiper(".swiper", {
+        loop: true,
+
+        // Navigation arrows
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>

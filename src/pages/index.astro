@@ -6,6 +6,7 @@ import Section from "../components/Section.astro";
 import AboutCard from "../components/AboutCard.astro";
 import Objective from "../components/Objective.astro";
 import Program from "../components/Program.astro";
+import Carousel from "../components/Carousel.astro";
 import ContactCard from "../components/ContactCard.astro";
 import Footer from "../components/Footer.astro";
 
@@ -166,318 +167,331 @@ import {
 						free of cost.
 					</li>
 				</ol>
-				<div class="placeholder rounded-md">
-					Photo Placeholder<br />
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
-					sed eaque, quasi debitis adipisci iure magni veniam numquam dolorum?
-					Facere, cupiditate at. Dolore tenetur nam, laboriosam autem quod
-					quidem in alias explicabo sed recusandae quas voluptatum dolor
-					consequatur odit eos unde eius blanditiis! Voluptatem, sunt doloremque.
-					Deserunt culpa a ex?
-				</div>
-			</Program>
+				<Carousel>
+					<div class="swiper-slide">Slide 1</div>
+					<div class="swiper-slide">Slide 2</div>
+					<div class="swiper-slide">Slide 3</div>
+				</Carousel>
 
-			<Program
-				id="prog-2"
-				title="Ahilyadevi Balsadan:"
-				className="hidden opacity-0"
-			>
-				<div slot="content">
-					<p>
-						To prepare the less privileged children as responsible
-						future citizens.
-					</p>
-					<ol>
-						<li>
-							A home away from home children- orphan, nobody to
-							support, in moral danger- who are in need of care
-							and protection.
-						</li>
-						<li>
-							These children are given care and protection,
-							education and bring them up in a family atmosphere,
-							children between the age of 6- 18 are given
-							admission in this home.
-						</li>
-						<li>
-							Besides formal education they are given vocational
-							trainings, programs for personality development and
-							social awareness, training in Karate, are part of
-							this home.
-						</li>
-					</ol>
-					<p>
-						Sponsored by women and child welfare Dept. state of
-						Maharashtra.
-					</p>
-				</div>
-				<div class="placeholder rounded-md">
-					Photo Placeholder<br />
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
-					sed eaque, quasi debitis adipisci iure magni veniam numquam dolorum?
-					Facere, cupiditate at. Dolore tenetur nam, laboriosam autem quod
-					quidem in alias explicabo sed recusandae quas voluptatum dolor
-					consequatur odit eos unde eius blanditiis! Voluptatem, sunt doloremque.
-					Deserunt culpa a ex?
-				</div>
-			</Program>
+				<Program
+					id="prog-2"
+					title="Ahilyadevi Balsadan:"
+					className="hidden opacity-0"
+				>
+					<div slot="content">
+						<p>
+							To prepare the less privileged children as
+							responsible future citizens.
+						</p>
+						<ol>
+							<li>
+								A home away from home children- orphan, nobody
+								to support, in moral danger- who are in need of
+								care and protection.
+							</li>
+							<li>
+								These children are given care and protection,
+								education and bring them up in a family
+								atmosphere, children between the age of 6- 18
+								are given admission in this home.
+							</li>
+							<li>
+								Besides formal education they are given
+								vocational trainings, programs for personality
+								development and social awareness, training in
+								Karate, are part of this home.
+							</li>
+						</ol>
+						<p>
+							Sponsored by women and child welfare Dept. state of
+							Maharashtra.
+						</p>
+					</div>
+					<div class="placeholder rounded-md">
+						Photo Placeholder<br />
+						Lorem ipsum dolor sit amet consectetur adipisicing elit.
+						Voluptate sed eaque, quasi debitis adipisci iure magni veniam
+						numquam dolorum? Facere, cupiditate at. Dolore tenetur nam,
+						laboriosam autem quod quidem in alias explicabo sed recusandae
+						quas voluptatum dolor consequatur odit eos unde eius blanditiis!
+						Voluptatem, sunt doloremque. Deserunt culpa a ex?
+					</div>
+				</Program>
 
-			<Program id="prog-3" title="Legal Aid" className="hidden opacity-0">
-				<div slot="content">
-					<ol>
-						<li>
-							The Centre stand by women to fight against
-							atrocities and violence against them and to fight
-							for their rights.
-						</li>
-						<li>
-							provide legal assistance for women, tribals and
-							other vulnerable people through legal litigation.
-						</li>
-						<li>
-							Provide legal awareness and education to people
-							about day to day useful and basic laws.
-						</li>
-					</ol>
-					<p>
-						Bring to the compromising table the matrimonial disputes
-						and settle them with the consent of both the parties.
-					</p>
-				</div>
-				<div class="placeholder rounded-md">
-					Photo Placeholder<br />
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
-					sed eaque, quasi debitis adipisci iure magni veniam numquam dolorum?
-					Facere, cupiditate at. Dolore tenetur nam, laboriosam autem quod
-					quidem in alias explicabo sed recusandae quas voluptatum dolor
-					consequatur odit eos unde eius blanditiis! Voluptatem, sunt doloremque.
-					Deserunt culpa a ex?
-				</div>
-			</Program>
+				<Program
+					id="prog-3"
+					title="Legal Aid"
+					className="hidden opacity-0"
+				>
+					<div slot="content">
+						<ol>
+							<li>
+								The Centre stand by women to fight against
+								atrocities and violence against them and to
+								fight for their rights.
+							</li>
+							<li>
+								provide legal assistance for women, tribals and
+								other vulnerable people through legal
+								litigation.
+							</li>
+							<li>
+								Provide legal awareness and education to people
+								about day to day useful and basic laws.
+							</li>
+						</ol>
+						<p>
+							Bring to the compromising table the matrimonial
+							disputes and settle them with the consent of both
+							the parties.
+						</p>
+					</div>
+					<div class="placeholder rounded-md">
+						Photo Placeholder<br />
+						Lorem ipsum dolor sit amet consectetur adipisicing elit.
+						Voluptate sed eaque, quasi debitis adipisci iure magni veniam
+						numquam dolorum? Facere, cupiditate at. Dolore tenetur nam,
+						laboriosam autem quod quidem in alias explicabo sed recusandae
+						quas voluptatum dolor consequatur odit eos unde eius blanditiis!
+						Voluptatem, sunt doloremque. Deserunt culpa a ex?
+					</div>
+				</Program>
 
-			<Program
-				id="prog-4"
-				title="Comprehensive Community Development programs:"
-				className="hidden opacity-0"
-			>
-				<div slot="content">
-					<p>
-						With the intension that the people take up the
-						responsibility for development and administration of
-						justice in the community and in that process women take
-						active participation and leadership, the organization
-						works to create awareness, motivation and capacity
-						building program to people at grass root level.
-					</p>
-					<ol>
-						<li>
-							Through women self-help groups and panchayati raj
-							programs develop capacities of women and empower
-							them.
-						</li>
-						<li>
-							To empower gramsabha through active participation of
-							people in decision making, planning, implementation
-							and control of natural resources and development
-							programs.
-						</li>
-						<li>
-							To improve the community health with special focus
-							on mother and infant care.
-						</li>
-						<li>
-							Generate employment for sustainable livelihood by
-							proper management through community participation.
-						</li>
-						<li>
-							Environment protection, promotion and bio- diversity
-							management through community participation.
-						</li>
-						<li>
-							To encourage the traditional and proper use of home
-							remedies and herbal medicines.
-						</li>
-					</ol>
-				</div>
-				<div class="placeholder rounded-md">
-					Photo Placeholder<br />
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
-					sed eaque, quasi debitis adipisci iure magni veniam numquam dolorum?
-					Facere, cupiditate at. Dolore tenetur nam, laboriosam autem quod
-					quidem in alias explicabo sed recusandae quas voluptatum dolor
-					consequatur odit eos unde eius blanditiis! Voluptatem, sunt doloremque.
-					Deserunt culpa a ex?
-				</div>
+				<Program
+					id="prog-4"
+					title="Comprehensive Community Development programs:"
+					className="hidden opacity-0"
+				>
+					<div slot="content">
+						<p>
+							With the intension that the people take up the
+							responsibility for development and administration of
+							justice in the community and in that process women
+							take active participation and leadership, the
+							organization works to create awareness, motivation
+							and capacity building program to people at grass
+							root level.
+						</p>
+						<ol>
+							<li>
+								Through women self-help groups and panchayati
+								raj programs develop capacities of women and
+								empower them.
+							</li>
+							<li>
+								To empower gramsabha through active
+								participation of people in decision making,
+								planning, implementation and control of natural
+								resources and development programs.
+							</li>
+							<li>
+								To improve the community health with special
+								focus on mother and infant care.
+							</li>
+							<li>
+								Generate employment for sustainable livelihood
+								by proper management through community
+								participation.
+							</li>
+							<li>
+								Environment protection, promotion and bio-
+								diversity management through community
+								participation.
+							</li>
+							<li>
+								To encourage the traditional and proper use of
+								home remedies and herbal medicines.
+							</li>
+						</ol>
+					</div>
+					<div class="placeholder rounded-md">
+						Photo Placeholder<br />
+						Lorem ipsum dolor sit amet consectetur adipisicing elit.
+						Voluptate sed eaque, quasi debitis adipisci iure magni veniam
+						numquam dolorum? Facere, cupiditate at. Dolore tenetur nam,
+						laboriosam autem quod quidem in alias explicabo sed recusandae
+						quas voluptatum dolor consequatur odit eos unde eius blanditiis!
+						Voluptatem, sunt doloremque. Deserunt culpa a ex?
+					</div>
+				</Program>
 			</Program>
 		</div>
-	</Section>
 
-	<Section
-		id="contact"
-		title="Contact Us"
-		titleSubText="We network with like minded NGOs, people’s movements and individuals on various issues"
-	>
-		<div
-			class="flex flex-col-reverse justify-center lg:flex-row lg:align-start gap-12 lg:gap-4"
+		<Section
+			id="contact"
+			title="Contact Us"
+			titleSubText="We network with like minded NGOs, people’s movements and individuals on various issues"
 		>
-			<!-- outer-flex -->
-			<div class="mx-auto w-full max-w-[550px]">
-				<form action="#" method="POST">
-					<div class="mb-5">
-						<input
-							type="text"
-							name="name"
-							id="name"
-							placeholder="Full Name"
-							class="w-full rounded-md border border-slate-300 bg-white py-3 px-6 text-base font-medium text-slate-700 outline-none focus:border-tertiary focus:shadow-md"
-						/>
-					</div>
-					<div class="mb-5">
-						<input
-							type="email"
-							name="email"
-							id="email"
-							placeholder="Enter your email (example@domain.com)"
-							class="w-full rounded-md border border-slate-300 bg-white py-3 px-6 text-base font-medium text-slate-700 outline-none focus:border-tertiary focus:shadow-md"
-						/>
-					</div>
-					<div class="mb-5">
-						<input
-							type="text"
-							name="subject"
-							id="subject"
-							placeholder="Enter your subject"
-							class="w-full rounded-md border border-slate-300 bg-white py-3 px-6 text-base font-medium text-slate-700 outline-none focus:border-tertiary focus:shadow-md"
-						/>
-					</div>
-					<div class="mb-5">
-						<textarea
-							rows="4"
-							name="message"
-							id="message"
-							placeholder="Enter your message"
-							class="w-full resize-none rounded-md border border-slate-300 bg-white py-3 px-6 text-base font-medium text-slate-700 outline-none focus:border-tertiary focus:shadow-md"
-						></textarea>
+			<div
+				class="flex flex-col-reverse justify-center lg:flex-row lg:align-start gap-12 lg:gap-4"
+			>
+				<!-- outer-flex -->
+				<div class="mx-auto w-full max-w-[550px]">
+					<form action="#" method="POST">
+						<div class="mb-5">
+							<input
+								type="text"
+								name="name"
+								id="name"
+								placeholder="Full Name"
+								class="w-full rounded-md border border-slate-300 bg-white py-3 px-6 text-base font-medium text-slate-700 outline-none focus:border-tertiary focus:shadow-md"
+							/>
+						</div>
+						<div class="mb-5">
+							<input
+								type="email"
+								name="email"
+								id="email"
+								placeholder="Enter your email (example@domain.com)"
+								class="w-full rounded-md border border-slate-300 bg-white py-3 px-6 text-base font-medium text-slate-700 outline-none focus:border-tertiary focus:shadow-md"
+							/>
+						</div>
+						<div class="mb-5">
+							<input
+								type="text"
+								name="subject"
+								id="subject"
+								placeholder="Enter your subject"
+								class="w-full rounded-md border border-slate-300 bg-white py-3 px-6 text-base font-medium text-slate-700 outline-none focus:border-tertiary focus:shadow-md"
+							/>
+						</div>
+						<div class="mb-5">
+							<textarea
+								rows="4"
+								name="message"
+								id="message"
+								placeholder="Enter your message"
+								class="w-full resize-none rounded-md border border-slate-300 bg-white py-3 px-6 text-base font-medium text-slate-700 outline-none focus:border-tertiary focus:shadow-md"
+							></textarea>
+						</div>
+						<div>
+							<button
+								class="hover:shadow-form rounded-md bg-primary py-3 px-8 text-base font-semibold text-white outline-none"
+							>
+								Submit
+							</button>
+						</div>
+					</form>
+				</div>
+				<div class="flex flex-col gap-8">
+					<div
+						class="flex flex-col md:flex-row justify-between gap-8"
+					>
+						<ContactCard title="Call Us" icon="fa-solid fa-phone">
+							<ol class="list-none text-sm">
+								<li class="pb-2">
+									<a href="tel:+919892494784"
+										>+91 9892494784</a
+									>
+								</li>
+								<li>
+									<a href="tel:+9199637415885"
+										>+91 9637415885</a
+									>
+								</li>
+							</ol>
+						</ContactCard>
+						<ContactCard title="Email" icon="fa-solid fa-envelope">
+							<ol class="list-none text-sm">
+								<li>
+									<a href="mailto:lokmangalghot@gmail.com">
+										lokmangalghot@gmail.com
+									</a>
+								</li>
+							</ol>
+						</ContactCard>
 					</div>
 					<div>
-						<button
-							class="hover:shadow-form rounded-md bg-primary py-3 px-8 text-base font-semibold text-white outline-none"
+						<ContactCard
+							title="Address"
+							icon="fa-solid fa-location-dot"
 						>
-							Submit
-						</button>
+							<ol class="list-none text-sm">
+								<li class="pb-2">
+									Lokmangal Sanstha, Ghot. P.O.,
+								</li>
+								<li class="pb-2">
+									Th. Chamorshi. Dt. Gadachiroli, 442-604;
+								</li>
+								<li class="pb-2">Maharashtra, India</li>
+								<li>Reg.No. F 3530/5/92 ( Ch )</li>
+							</ol>
+						</ContactCard>
 					</div>
-				</form>
-			</div>
-			<div class="flex flex-col gap-8">
-				<div class="flex flex-col md:flex-row justify-between gap-8">
-					<ContactCard title="Call Us" icon="fa-solid fa-phone">
-						<ol class="list-none text-sm">
-							<li class="pb-2">
-								<a href="tel:+919892494784">+91 9892494784</a>
-							</li>
-							<li>
-								<a href="tel:+9199637415885">+91 9637415885</a>
-							</li>
-						</ol>
-					</ContactCard>
-					<ContactCard title="Email" icon="fa-solid fa-envelope">
-						<ol class="list-none text-sm">
-							<li>
-								<a href="mailto:lokmangalghot@gmail.com">
-									lokmangalghot@gmail.com
-								</a>
-							</li>
-						</ol>
-					</ContactCard>
-				</div>
-				<div>
-					<ContactCard
-						title="Address"
-						icon="fa-solid fa-location-dot"
-					>
-						<ol class="list-none text-sm">
-							<li class="pb-2">Lokmangal Sanstha, Ghot. P.O.,</li>
-							<li class="pb-2">
-								Th. Chamorshi. Dt. Gadachiroli, 442-604;
-							</li>
-							<li class="pb-2">Maharashtra, India</li>
-							<li>Reg.No. F 3530/5/92 ( Ch )</li>
-						</ol>
-					</ContactCard>
 				</div>
 			</div>
-		</div>
+		</Section>
+
+		<!-- Map -->
+		<iframe
+			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5852.907569536197!2d79.89010809364784!3d19.940787489377495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a2d1b66cd5b6ded%3A0xa638fba1afdfdd8b!2sChamorshi%2C%20Maharashtra%20442603!5e0!3m2!1sen!2sin!4v1688306925829!5m2!1sen!2sin"
+			class="mx-auto w-full h-96"
+			loading="lazy"
+			referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+		<button id="scrollBtn" title="Go to top">
+			<i class="fa-solid fa-angles-up fa-md" style="color: #ffffff;"></i>
+		</button>
+		<Footer />
 	</Section>
 
-	<!-- Map -->
-	<iframe
-		src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5852.907569536197!2d79.89010809364784!3d19.940787489377495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a2d1b66cd5b6ded%3A0xa638fba1afdfdd8b!2sChamorshi%2C%20Maharashtra%20442603!5e0!3m2!1sen!2sin!4v1688306925829!5m2!1sen!2sin"
-		class="mx-auto w-full h-96"
-		loading="lazy"
-		referrerpolicy="no-referrer-when-downgrade"></iframe>
+	<style>
+		#hero {
+			height: 70vh;
+			width: 100%;
+			@apply bg-secondary;
+		}
 
-	<button id="scrollBtn" title="Go to top">
-		<i class="fa-solid fa-angles-up fa-md" style="color: #ffffff;"></i>
-	</button>
-	<Footer />
+		.placeholder {
+			height: 100%;
+			width: 100%;
+			background-color: grey;
+		}
+
+		.program-btn {
+			background-color: black;
+			color: white;
+			@apply rounded-md;
+		}
+		.program-btn.active {
+			@apply bg-primary;
+		}
+		@media screen and (max-width: 768px) {
+			.program-btn {
+				padding: 0.5rem 1.25rem;
+				margin-right: 0.75rem;
+				margin-bottom: 0.75rem;
+			}
+		}
+		@media screen and (min-width: 768px) {
+			.program-btn {
+				padding: 0.75rem 0rem;
+				margin: 0.75rem 1.5rem 0.75rem 0px;
+			}
+		}
+
+		#scrollBtn {
+			height: 40px;
+			width: 40px;
+			display: none;
+			position: fixed;
+			bottom: 20px;
+			right: 30px;
+			z-index: 99;
+			border: none;
+			outline: none;
+			color: white;
+			cursor: pointer;
+			padding: 0.5rem;
+			border-radius: 0.5rem;
+			transform: scaleY(0);
+			transition: all 0.4s ease-in-out;
+			@apply bg-primary;
+		}
+		#scrollBtn:hover {
+			background-color: #262626;
+		}
+	</style>
+
+	<script src="../scripts/"></script>
 </Layout>
-
-<style>
-	#hero {
-		height: 70vh;
-		width: 100%;
-		@apply bg-secondary;
-	}
-	.placeholder {
-		height: 100%;
-		width: 100%;
-		background-color: grey;
-	}
-
-	.program-btn {
-		background-color: black;
-		color: white;
-		@apply rounded-md;
-	}
-	.program-btn.active {
-		@apply bg-primary;
-	}
-	@media screen and (max-width: 768px) {
-		.program-btn {
-			padding: 0.5rem 1.25rem;
-			margin-right: 0.75rem;
-			margin-bottom: 0.75rem;
-		}
-	}
-	@media screen and (min-width: 768px) {
-		.program-btn {
-			padding: 0.75rem 0rem;
-			margin: 0.75rem 1.5rem 0.75rem 0px;
-		}
-	}
-
-	#scrollBtn {
-		height: 40px;
-		width: 40px;
-		display: none;
-		position: fixed;
-		bottom: 20px;
-		right: 30px;
-		z-index: 99;
-		border: none;
-		outline: none;
-		color: white;
-		cursor: pointer;
-		padding: 0.5rem;
-		border-radius: 0.5rem;
-		transform: scaleY(0);
-		transition: all 0.4s ease-in-out;
-		@apply bg-primary;
-	}
-
-	#scrollBtn:hover {
-		background-color: #262626;
-	}
-</style>
-
-<script src="../scripts/"/>
