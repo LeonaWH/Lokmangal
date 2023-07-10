@@ -21,10 +21,15 @@ import "swiper/css/pagination";
     <div class="swiper-button-next"></div>
 </div>
 
-<style>
+<style is:global>
     .swiper {
-        width: 600px;
-        height: 300px;
+        @apply w-96;
+    }
+    .swiper .swiper-slide {
+        background: #fff;
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
     }
 </style>
 
