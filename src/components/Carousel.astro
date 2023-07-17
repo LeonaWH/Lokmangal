@@ -3,48 +3,62 @@
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import "swiper/css/effect-fade";
+interface props {
+    photos: Array<string>;
+}
+const { photos } = Astro.props as props;
 ---
 
-<div class="swiper">
+<div class="swiper overflow-hidden rounded-md">
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
         <!-- Slides -->
-        <slot />
-        <!-- <div class="swiper-slide">Slide 1</div>
-        <div class="swiper-slide">Slide 2</div>
-        <div class="swiper-slide">Slide 3</div> -->
-        ...
+        {photos.map((photo)=>(
+            <div class="swiper-slide"><img src={photo} alt="image" class="object-cover h-full w-full" /></div> 
+        ))}
     </div>
 
     <!-- If we need navigation buttons -->
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev drop-shadow-lg"></div>
+    <div class="swiper-button-next drop-shadow-lg"></div>
+    <div class="swiper-pagination  drop-shadow-lg"></div>
 </div>
 
 <style is:global>
     .swiper {
-        @apply w-96;
+        @apply w-96 aspect-[4/3] bg-white;
     }
     .swiper .swiper-slide {
-        background: #fff;
+        @apply h-full grid place-items-center;
     }
     .swiper-button-prev,
-    .swiper-button-next {
+    .swiper-button-next{
+      text-shadow: #000 1px 0 10px;
     }
 </style>
 
 <script>
     // Swiper
     import Swiper from "swiper";
-    import { Navigation, Pagination } from "swiper/modules";
-    Swiper.use([Navigation, Pagination]);
+    import { EffectFade, Autoplay, Navigation, Pagination } from "swiper/modules";
+    Swiper.use([EffectFade, Autoplay, Navigation, Pagination]);
     const swiper = new Swiper(".swiper", {
         loop: true,
-
-        // Navigation arrows
+        // TODO: Fix Fade effect
+        spaceBetween: 30,
+        effect: 'fade',
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            dynamicBullets: true,
         },
     });
 </script>
