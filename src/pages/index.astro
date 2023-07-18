@@ -20,6 +20,13 @@ import {
 	Together,
 	Welfare,
 } from "../assets/images/icons";
+
+// images
+import { OneOne, OneTwo, OneThree, OneFour, OneFive, OneSix, OneSeven } from "../assets/images/1";
+import { TwoOne, TwoTwo, TwoThree, TwoFour, TwoFive, TwoSix } from "../assets/images/2";
+import { ThreeOne, ThreeTwo, ThreeThree, ThreeFour, ThreeFive } from "../assets/images/3";
+import { FourOne, FourTwo, FourThree, FourFour, FourFive, FourSix } from "../assets/images/4";
+
 ---
 
 <Layout>
@@ -167,11 +174,9 @@ import {
 						free of cost.
 					</li>
 				</ol>
-				<Carousel>
-					<div class="swiper-slide">Slide 1</div>
-					<div class="swiper-slide">Slide 2</div>
-					<div class="swiper-slide">Slide 3</div>
-				</Carousel>
+				<Carousel
+          photos={[OneOne, OneTwo, OneThree, OneFour,OneFive, OneSix, OneSeven]}
+        />
 			</Program>
 
 			<Program
@@ -208,15 +213,9 @@ import {
 						Maharashtra.
 					</p>
 				</div>
-				<div class="placeholder rounded-md">
-					Photo Placeholder<br />
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
-					sed eaque, quasi debitis adipisci iure magni veniam numquam dolorum?
-					Facere, cupiditate at. Dolore tenetur nam, laboriosam autem quod
-					quidem in alias explicabo sed recusandae quas voluptatum dolor
-					consequatur odit eos unde eius blanditiis! Voluptatem, sunt doloremque.
-					Deserunt culpa a ex?
-				</div>
+				<Carousel
+          photos={[TwoOne, TwoTwo, TwoThree, TwoFour, TwoFive, TwoSix]}
+        />
 			</Program>
 
 			<Program id="prog-3" title="Legal Aid" className="hidden opacity-0">
@@ -241,15 +240,9 @@ import {
 						and settle them with the consent of both the parties.
 					</p>
 				</div>
-				<div class="placeholder rounded-md">
-					Photo Placeholder<br />
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
-					sed eaque, quasi debitis adipisci iure magni veniam numquam dolorum?
-					Facere, cupiditate at. Dolore tenetur nam, laboriosam autem quod
-					quidem in alias explicabo sed recusandae quas voluptatum dolor
-					consequatur odit eos unde eius blanditiis! Voluptatem, sunt doloremque.
-					Deserunt culpa a ex?
-				</div>
+				<Carousel
+          photos={[ThreeOne, ThreeTwo, ThreeThree, ThreeFour, ThreeFive]}
+        />
 			</Program>
 
 			<Program
@@ -296,15 +289,9 @@ import {
 						</li>
 					</ol>
 				</div>
-				<div class="placeholder rounded-md">
-					Photo Placeholder<br />
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
-					sed eaque, quasi debitis adipisci iure magni veniam numquam dolorum?
-					Facere, cupiditate at. Dolore tenetur nam, laboriosam autem quod
-					quidem in alias explicabo sed recusandae quas voluptatum dolor
-					consequatur odit eos unde eius blanditiis! Voluptatem, sunt doloremque.
-					Deserunt culpa a ex?
-				</div>
+				<Carousel
+          photos={[FourOne, FourTwo, FourThree, FourFour, FourFive, FourSix]}
+        />
 			</Program>
 		</div>
 	</Section>
