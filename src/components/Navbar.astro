@@ -1,93 +1,88 @@
 ---
 import logo from "../assets/images/logo.webp";
-import { Hamburger } from "../assets/images/icons";
+import { Hamburger } from "../assets/icons";
 ---
 
 <header
-    id="navbar"
-    class="fixed z-50 w-full top-0 lg:flex justify-between px-7 md:px-14 py-3 shadow-lg bg-white"
+  id="navbar"
+  class="fixed z-50 w-full top-0 lg:flex justify-between px-7 md:px-14 py-3 shadow-lg bg-white"
 >
-    <div class="flex justify-between">
-        <a
-            href="#"
-            class="text-primary flex items-center text-lg md:text-xl font-bold"
-        >
-            <img class="h-12 mr-4 md:mr-4" src={logo} alt="Lokmangal Logo" />
-            Lokmangal
+  <div class="flex justify-between">
+    <a
+      href="#"
+      class="text-primary flex items-center text-lg md:text-xl font-bold"
+    >
+      <img class="h-12 mr-4 md:mr-4" src={logo} alt="Lokmangal Logo" />
+      Lokmangal
+    </a>
+    <button class="lg:hidden" id="hamburgerBtn">
+      <img class="h-8" src={Hamburger} alt="" />
+    </button>
+  </div>
+  <nav class="lg:block">
+    <ul class="mt-3 lg:mt-0 lg:flex h-full items-center">
+      <li class="nav-link active"><a href="#">Home</a></li>
+      <li class="nav-link"><a href="#about">About Us</a></li>
+      <li class="nav-link"><a href="#objectives">Our Objectives</a></li>
+      <li class="nav-link">
+        <a href="#programs">Government Sponsored Programs</a>
+      </li>
+      <li class="nav-link">
+        <a href="#contact" class="bg-primary px-5 py-1.5 text-white rounded-md">
+          Contact Us
         </a>
-        <button class="lg:hidden" id="hamburgerBtn">
-            <img class="h-8" src={Hamburger} alt="" />
-        </button>
-    </div>
-    <nav class="lg:block">
-        <ul class="mt-3 lg:mt-0 lg:flex h-full items-center">
-            <li class="nav-link active"><a href="#">Home</a></li>
-            <li class="nav-link"><a href="#about">About Us</a></li>
-            <li class="nav-link"><a href="#objectives">Our Objectives</a></li>
-            <li class="nav-link">
-                <a href="#programs">Government Sponsored Programs</a>
-            </li>
-            <li class="nav-link">
-                <a
-                    href="#contact"
-                    class="bg-primary px-5 py-1.5 text-white rounded-md"
-                >
-                    Contact Us
-                </a>
-            </li>
-        </ul>
-    </nav>
+      </li>
+    </ul>
+  </nav>
 </header>
 
 <script>
-    const hamburger: HTMLElement = document.querySelector("#hamburgerBtn")!;
-    const nav: HTMLElement = document.querySelector("nav")!;
-    const liArr = document.querySelectorAll("nav li")!;
-    hamburger.addEventListener("click", () =>
-        nav.classList.toggle("transform")
-    );
-    liArr.forEach((li) =>
-        li.addEventListener("click", () => nav.classList.toggle("transform"))
-    );
+  const hamburger: HTMLElement = document.querySelector("#hamburgerBtn")!;
+  const nav: HTMLElement = document.querySelector("nav")!;
+  const liArr = document.querySelectorAll("nav li")!;
+  hamburger.addEventListener("click", () => nav.classList.toggle("transform"));
+  liArr.forEach((li) =>
+    li.addEventListener("click", () => nav.classList.toggle("transform"))
+  );
 </script>
 
 <style>
-    .nav-link {
-        @apply mt-4 lg:mt-0 lg:ml-8 hover:text-primary transition-all relative;
+  .nav-link {
+    @apply mt-4 lg:mt-0 lg:ml-8 hover:text-primary transition-all relative;
+  }
+  .nav-link.active {
+    @apply text-primary;
+  }
+  @media screen and (max-width: 1024px) {
+    nav {
+      background-color: white;
+      position: absolute;
+      left: 0;
+      width: 100%;
+      transform: scaleY(0);
+      transform-origin: top;
+      transition: all 0.5s ease-in-out;
+      @apply px-14 pb-4 shadow-lg;
     }
-    .nav-link.active {
-        @apply text-primary;
+    nav.transform {
+      transform: scaleY(1);
     }
-    @media screen and (max-width: 1024px) {
-        nav {
-            background-color: white;
-            position: absolute;
-            left: 0;
-            width: 100%;
-            transform: scaleY(0);
-            transform-origin: top;
-            transition: all 0.5s ease-in-out;
-            @apply px-14 pb-4 shadow-lg;
-        }
-        nav.transform {
-            transform: scaleY(1);
-        }
+  }
+  @media screen and (min-width: 1024px) {
+    .nav-link a::after {
+      position: absolute;
+      content: "";
+      left: 50%;
+      bottom: -4px;
+      width: 40px;
+      height: 2px;
+      margin-left: -20px;
+      transform: scaleX(0);
+      transition: transform 0.5s ease-in-out;
+      @apply bg-primary;
     }
-    @media screen and (min-width: 1024px) {
-        .nav-link a::after {
-            position: absolute;
-            content: "";
-            left: 50%;
-            bottom: -4px;
-            width: 40px;
-            height: 2px;
-            margin-left: -20px;
-            transform: scaleX(0);
-            transition: transform 0.5s ease-in-out;
-            @apply bg-primary;
-        }
-        .nav-link.active a::after {
-            transform: scaleX(1);
-        }
+    .nav-link.active a::after {
+      transform: scaleX(1);
     }
+  }
 </style>
