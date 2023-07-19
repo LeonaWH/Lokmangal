@@ -22,38 +22,10 @@ import {
 } from "../assets/icons";
 
 // images
-import {
-  OneOne,
-  OneTwo,
-  OneThree,
-  OneFour,
-  OneFive,
-  OneSix,
-  OneSeven,
-} from "../assets/images/programs/1";
-import {
-  TwoOne,
-  TwoTwo,
-  TwoThree,
-  TwoFour,
-  TwoFive,
-  TwoSix,
-} from "../assets/images/programs/2";
-import {
-  ThreeOne,
-  ThreeTwo,
-  ThreeThree,
-  ThreeFour,
-  ThreeFive,
-} from "../assets/images/programs/3";
-import {
-  FourOne,
-  FourTwo,
-  FourThree,
-  FourFour,
-  FourFive,
-  FourSix,
-} from "../assets/images/programs/4";
+const programOne = await Astro.glob("/src/assets/images/programs/1/*");
+const programTwo = await Astro.glob("/src/assets/images/programs/2/*");
+const programThree = await Astro.glob("/src/assets/images/programs/3/*");
+const programFour = await Astro.glob("/src/assets/images/programs/4/*");
 ---
 
 <Layout>
@@ -194,17 +166,7 @@ import {
             cost.
           </li>
         </ol>
-        <Carousel
-          photos={[
-            OneOne,
-            OneTwo,
-            OneThree,
-            OneFour,
-            OneFive,
-            OneSix,
-            OneSeven,
-          ]}
-        />
+        <Carousel photos={programOne.map((program) => program.default)} />
       </Program>
 
       <Program
@@ -237,9 +199,7 @@ import {
             Sponsored by women and child welfare Dept. state of Maharashtra.
           </p>
         </div>
-        <Carousel
-          photos={[TwoOne, TwoTwo, TwoThree, TwoFour, TwoFive, TwoSix]}
-        />
+        <Carousel photos={programTwo.map((program) => program.default)} />
       </Program>
 
       <Program id="prog-3" title="Legal Aid" className="hidden opacity-0">
@@ -263,9 +223,7 @@ import {
             them with the consent of both the parties.
           </p>
         </div>
-        <Carousel
-          photos={[ThreeOne, ThreeTwo, ThreeThree, ThreeFour, ThreeFive]}
-        />
+        <Carousel photos={programThree.map((program) => program.default)} />
       </Program>
 
       <Program
@@ -309,9 +267,7 @@ import {
             </li>
           </ol>
         </div>
-        <Carousel
-          photos={[FourOne, FourTwo, FourThree, FourFour, FourFive, FourSix]}
-        />
+        <Carousel photos={programFour.map((program) => program.default)} />
       </Program>
     </div>
   </Section>
