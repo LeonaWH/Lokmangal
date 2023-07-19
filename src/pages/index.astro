@@ -12,456 +12,471 @@ import Footer from "../components/Footer.astro";
 
 // icons
 import {
-	Care,
-	Eco,
-	Just,
-	Participation,
-	Rights,
-	Together,
-	Welfare,
+  Care,
+  Eco,
+  Just,
+  Participation,
+  Rights,
+  Together,
+  Welfare,
 } from "../assets/images/icons";
 
 // images
-import { OneOne, OneTwo, OneThree, OneFour, OneFive, OneSix, OneSeven } from "../assets/images/1";
-import { TwoOne, TwoTwo, TwoThree, TwoFour, TwoFive, TwoSix } from "../assets/images/2";
-import { ThreeOne, ThreeTwo, ThreeThree, ThreeFour, ThreeFive } from "../assets/images/3";
-import { FourOne, FourTwo, FourThree, FourFour, FourFive, FourSix } from "../assets/images/4";
-
+import {
+  OneOne,
+  OneTwo,
+  OneThree,
+  OneFour,
+  OneFive,
+  OneSix,
+  OneSeven,
+} from "../assets/images/programs/1";
+import {
+  TwoOne,
+  TwoTwo,
+  TwoThree,
+  TwoFour,
+  TwoFive,
+  TwoSix,
+} from "../assets/images/programs/2";
+import {
+  ThreeOne,
+  ThreeTwo,
+  ThreeThree,
+  ThreeFour,
+  ThreeFive,
+} from "../assets/images/programs/3";
+import {
+  FourOne,
+  FourTwo,
+  FourThree,
+  FourFour,
+  FourFive,
+  FourSix,
+} from "../assets/images/programs/4";
 ---
 
 <Layout>
-	<Navbar />
+  <Navbar />
 
-	<div id="hero"></div>
+  <div id="hero"></div>
 
-	<Section
-		id="about"
-		title="About Us"
-		titleSubText="There are many variations of passages of Lorem Ipsum available, but the majority have"
-	>
-		<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-			<div>
-				<p>
-					Lokmangal stands for the total development of people.
-					Lokmangal is a non-profitable social organization born out
-					of the concept of holistic health of women and the
-					comprehensive development of the rural people and from their
-					struggles to achieve these goals. The organization works
-					preserving the eternal truth of equality, socialjustice and
-					brotherhood. Respect for one another, national integration,
-					unity in diversity are the basic principles the organization
-					upholds.
-				</p>
-			</div>
-			<div class="placeholder rounded-md">
-				Photo Placeholder <br />
-				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam atque
-				ipsam at corporis culpa blanditiis assumenda vitae quod earum architecto,
-				dolores dolorum ut quisquam aliquam repellendus enim eum voluptatibus
-				laudantium expedita ad quia repellat aut ea similique. Fugiat delectus
-				molestiae possimus iure quo deserunt aspernatur eius tempora libero,
-				voluptatum aut!
-			</div>
-			<AboutCard title="Vision" icon="fa-solid fa-eye">
-				<p class="text-left">
-					A prosperous community where women enjoy holistic health and
-					every individual lives with dignity that leads to a society
-					free from injustice, exploitation and corruption, giving way
-					to equality, social justice and harmony
-				</p>
-			</AboutCard>
-			<AboutCard title="Mission" icon="fa-brands fa-get-pocket">
-				<ol class="list-decimal text-left">
-					<li>
-						To empower women, making them centre of development.
-					</li>
-					<li>
-						To bring about sustainable village development through
-						local leadership and people’s organization.
-					</li>
-				</ol>
-			</AboutCard>
-		</div>
-	</Section>
+  <Section
+    id="about"
+    title="About Us"
+    titleSubText="There are many variations of passages of Lorem Ipsum available, but the majority have"
+  >
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div>
+        <p>
+          Lokmangal stands for the total development of people. Lokmangal is a
+          non-profitable social organization born out of the concept of holistic
+          health of women and the comprehensive development of the rural people
+          and from their struggles to achieve these goals. The organization
+          works preserving the eternal truth of equality, socialjustice and
+          brotherhood. Respect for one another, national integration, unity in
+          diversity are the basic principles the organization upholds.
+        </p>
+      </div>
+      <div class="placeholder rounded-md">
+        Photo Placeholder <br />Lorem, ipsum dolor sit amet consectetur
+        adipisicing elit. Nam atque ipsam at corporis culpa blanditiis assumenda
+        vitae quod earum architecto, dolores dolorum ut quisquam aliquam
+        repellendus enim eum voluptatibus laudantium expedita ad quia repellat
+        aut ea similique. Fugiat delectus molestiae possimus iure quo deserunt
+        aspernatur eius tempora libero, voluptatum aut!
+      </div>
+      <AboutCard title="Vision" icon="fa-solid fa-eye">
+        <p class="text-left">
+          A prosperous community where women enjoy holistic health and every
+          individual lives with dignity that leads to a society free from
+          injustice, exploitation and corruption, giving way to equality, social
+          justice and harmony
+        </p>
+      </AboutCard>
+      <AboutCard title="Mission" icon="fa-brands fa-get-pocket">
+        <ol class="list-decimal text-left">
+          <li>To empower women, making them centre of development.</li>
+          <li>
+            To bring about sustainable village development through local
+            leadership and people’s organization.
+          </li>
+        </ol>
+      </AboutCard>
+    </div>
+  </Section>
 
-	<Section
-		id="objectives"
-		title="Objectives"
-		titleSubText="There are many variations of passages of Lorem Ipsum available, but the majority have"
-	>
-		<div
-			class="flex flex-wrap justify-center md:gap-x-4 lg:gap-x-12 md:gap-y-4 w-full"
-		>
-			<Objective
-				content="To address women’s issues, through systematic capacity building and by formation of women’s organization."
-				icon={Together}
-			/>
+  <Section
+    id="objectives"
+    title="Objectives"
+    titleSubText="There are many variations of passages of Lorem Ipsum available, but the majority have"
+  >
+    <div
+      class="flex flex-wrap justify-center md:gap-x-4 lg:gap-x-12 md:gap-y-4 w-full"
+    >
+      <Objective
+        content="To address women’s issues, through systematic capacity building and by formation of women’s organization."
+        icon={Together}
+      />
 
-			<Objective
-				content="To provide legal assistance to fight for social justice and human rights."
-				icon={Just}
-			/>
+      <Objective
+        content="To provide legal assistance to fight for social justice and human rights."
+        icon={Just}
+      />
 
-			<Objective
-				content="To increase the active participation of women in the gramsabha and in the process of development and decision making."
-				icon={Participation}
-			/>
+      <Objective
+        content="To increase the active participation of women in the gramsabha and in the process of development and decision making."
+        icon={Participation}
+      />
 
-			<Objective
-				content="To strengthen the right based movements through local leadership and people’s organization."
-				icon={Rights}
-			/>
+      <Objective
+        content="To strengthen the right based movements through local leadership and people’s organization."
+        icon={Rights}
+      />
 
-			<Objective
-				content="To provide care and protection to women and children who are trapped in the moral, social, or familial problems and rehabilitate them to lead a healthy life."
-				icon={Care}
-			/>
+      <Objective
+        content="To provide care and protection to women and children who are trapped in the moral, social, or familial problems and rehabilitate them to lead a healthy life."
+        icon={Care}
+      />
 
-			<Objective
-				content="To motivate people for collective responsibility in promoting environment and bio-diversity and its proper management."
-				icon={Eco}
-			/>
+      <Objective
+        content="To motivate people for collective responsibility in promoting environment and bio-diversity and its proper management."
+        icon={Eco}
+      />
 
-			<Objective
-				content="To improve the living conditions and health status of the rural poor, conduct community health activities, and social welfare programs."
-				icon={Welfare}
-			/>
-		</div>
-	</Section>
+      <Objective
+        content="To improve the living conditions and health status of the rural poor, conduct community health activities, and social welfare programs."
+        icon={Welfare}
+      />
+    </div>
+  </Section>
 
-	<Section
-		id="programs"
-		className="bg-secondary"
-		title="Government Sponsored Programs"
-		titleSubText="There are many variations of passages of Lorem Ipsum available, but the majority have"
-	>
-		<div class="grid grid-flow-row lg:grid-flow-col">
-			<!-- Buttons -->
-			<div
-				class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-1 lg:w-40 lg:h-[10%]"
-			>
-				<button value="prog-1" class="program-btn active">
-					Mathoshri Swadhar Greh
-				</button>
-				<button value="prog-2" class="program-btn">
-					Ahilyadevi Balsadan
-				</button>
-				<button value="prog-3" class="program-btn">Legal Aid</button>
-				<button value="prog-4" class="program-btn">
-					Community Development
-				</button>
-			</div>
+  <Section
+    id="programs"
+    className="bg-secondary"
+    title="Government Sponsored Programs"
+    titleSubText="There are many variations of passages of Lorem Ipsum available, but the majority have"
+  >
+    <div class="grid grid-flow-row lg:grid-flow-col">
+      <!-- Buttons -->
+      <div
+        class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-1 lg:w-40 lg:h-[10%]"
+      >
+        <button value="prog-1" class="program-btn active">
+          Mathoshri Swadhar Greh
+        </button>
+        <button value="prog-2" class="program-btn"> Ahilyadevi Balsadan</button>
+        <button value="prog-3" class="program-btn">Legal Aid</button>
+        <button value="prog-4" class="program-btn">
+          Community Development
+        </button>
+      </div>
 
-			<!-- Content -->
-			<Program
-				id="prog-1"
-				title="Mathoshri Swadhar Greh for women in distress:"
-			>
-				<ol slot="content">
-					<li>
-						Provide shelter and support to women who are bearing the
-						brunt of social, moral and family problems and violence.
-					</li>
-					<li>
-						Individual and family counseling, legal assistance,
-						vocational training, formal & non-formal education,
-						personality development and social awareness programs by
-						which they are rehabilitated to lead a healthy normal
-						life and get back in to the main stream of the society.
-					</li>
-					<li>
-						The inmates of this home are provided all the facilities
-						free of cost.
-					</li>
-				</ol>
-				<Carousel
-          photos={[OneOne, OneTwo, OneThree, OneFour,OneFive, OneSix, OneSeven]}
+      <!-- Content -->
+      <Program
+        id="prog-1"
+        title="Mathoshri Swadhar Greh for women in distress:"
+      >
+        <ol slot="content">
+          <li>
+            Provide shelter and support to women who are bearing the brunt of
+            social, moral and family problems and violence.
+          </li>
+          <li>
+            Individual and family counseling, legal assistance, vocational
+            training, formal & non-formal education, personality development and
+            social awareness programs by which they are rehabilitated to lead a
+            healthy normal life and get back in to the main stream of the
+            society.
+          </li>
+          <li>
+            The inmates of this home are provided all the facilities free of
+            cost.
+          </li>
+        </ol>
+        <Carousel
+          photos={[
+            OneOne,
+            OneTwo,
+            OneThree,
+            OneFour,
+            OneFive,
+            OneSix,
+            OneSeven,
+          ]}
         />
-			</Program>
+      </Program>
 
-			<Program
-				id="prog-2"
-				title="Ahilyadevi Balsadan:"
-				className="hidden opacity-0"
-			>
-				<div slot="content">
-					<p>
-						To prepare the less privileged children as responsible
-						future citizens.
-					</p>
-					<ol>
-						<li>
-							A home away from home children- orphan, nobody to
-							support, in moral danger- who are in need of care
-							and protection.
-						</li>
-						<li>
-							These children are given care and protection,
-							education and bring them up in a family atmosphere,
-							children between the age of 6- 18 are given
-							admission in this home.
-						</li>
-						<li>
-							Besides formal education they are given vocational
-							trainings, programs for personality development and
-							social awareness, training in Karate, are part of
-							this home.
-						</li>
-					</ol>
-					<p>
-						Sponsored by women and child welfare Dept. state of
-						Maharashtra.
-					</p>
-				</div>
-				<Carousel
+      <Program
+        id="prog-2"
+        title="Ahilyadevi Balsadan:"
+        className="hidden opacity-0"
+      >
+        <div slot="content">
+          <p>
+            To prepare the less privileged children as responsible future
+            citizens.
+          </p>
+          <ol>
+            <li>
+              A home away from home children- orphan, nobody to support, in
+              moral danger- who are in need of care and protection.
+            </li>
+            <li>
+              These children are given care and protection, education and bring
+              them up in a family atmosphere, children between the age of 6- 18
+              are given admission in this home.
+            </li>
+            <li>
+              Besides formal education they are given vocational trainings,
+              programs for personality development and social awareness,
+              training in Karate, are part of this home.
+            </li>
+          </ol>
+          <p>
+            Sponsored by women and child welfare Dept. state of Maharashtra.
+          </p>
+        </div>
+        <Carousel
           photos={[TwoOne, TwoTwo, TwoThree, TwoFour, TwoFive, TwoSix]}
         />
-			</Program>
+      </Program>
 
-			<Program id="prog-3" title="Legal Aid" className="hidden opacity-0">
-				<div slot="content">
-					<ol>
-						<li>
-							The Centre stand by women to fight against
-							atrocities and violence against them and to fight
-							for their rights.
-						</li>
-						<li>
-							provide legal assistance for women, tribals and
-							other vulnerable people through legal litigation.
-						</li>
-						<li>
-							Provide legal awareness and education to people
-							about day to day useful and basic laws.
-						</li>
-					</ol>
-					<p>
-						Bring to the compromising table the matrimonial disputes
-						and settle them with the consent of both the parties.
-					</p>
-				</div>
-				<Carousel
+      <Program id="prog-3" title="Legal Aid" className="hidden opacity-0">
+        <div slot="content">
+          <ol>
+            <li>
+              The Centre stand by women to fight against atrocities and violence
+              against them and to fight for their rights.
+            </li>
+            <li>
+              provide legal assistance for women, tribals and other vulnerable
+              people through legal litigation.
+            </li>
+            <li>
+              Provide legal awareness and education to people about day to day
+              useful and basic laws.
+            </li>
+          </ol>
+          <p>
+            Bring to the compromising table the matrimonial disputes and settle
+            them with the consent of both the parties.
+          </p>
+        </div>
+        <Carousel
           photos={[ThreeOne, ThreeTwo, ThreeThree, ThreeFour, ThreeFive]}
         />
-			</Program>
+      </Program>
 
-			<Program
-				id="prog-4"
-				title="Comprehensive Community Development programs:"
-				className="hidden opacity-0"
-			>
-				<div slot="content">
-					<p>
-						With the intension that the people take up the
-						responsibility for development and administration of
-						justice in the community and in that process women take
-						active participation and leadership, the organization
-						works to create awareness, motivation and capacity
-						building program to people at grass root level.
-					</p>
-					<ol>
-						<li>
-							Through women self-help groups and panchayati raj
-							programs develop capacities of women and empower
-							them.
-						</li>
-						<li>
-							To empower gramsabha through active participation of
-							people in decision making, planning, implementation
-							and control of natural resources and development
-							programs.
-						</li>
-						<li>
-							To improve the community health with special focus
-							on mother and infant care.
-						</li>
-						<li>
-							Generate employment for sustainable livelihood by
-							proper management through community participation.
-						</li>
-						<li>
-							Environment protection, promotion and bio- diversity
-							management through community participation.
-						</li>
-						<li>
-							To encourage the traditional and proper use of home
-							remedies and herbal medicines.
-						</li>
-					</ol>
-				</div>
-				<Carousel
+      <Program
+        id="prog-4"
+        title="Comprehensive Community Development programs:"
+        className="hidden opacity-0"
+      >
+        <div slot="content">
+          <p>
+            With the intension that the people take up the responsibility for
+            development and administration of justice in the community and in
+            that process women take active participation and leadership, the
+            organization works to create awareness, motivation and capacity
+            building program to people at grass root level.
+          </p>
+          <ol>
+            <li>
+              Through women self-help groups and panchayati raj programs develop
+              capacities of women and empower them.
+            </li>
+            <li>
+              To empower gramsabha through active participation of people in
+              decision making, planning, implementation and control of natural
+              resources and development programs.
+            </li>
+            <li>
+              To improve the community health with special focus on mother and
+              infant care.
+            </li>
+            <li>
+              Generate employment for sustainable livelihood by proper
+              management through community participation.
+            </li>
+            <li>
+              Environment protection, promotion and bio- diversity management
+              through community participation.
+            </li>
+            <li>
+              To encourage the traditional and proper use of home remedies and
+              herbal medicines.
+            </li>
+          </ol>
+        </div>
+        <Carousel
           photos={[FourOne, FourTwo, FourThree, FourFour, FourFive, FourSix]}
         />
-			</Program>
-		</div>
-	</Section>
+      </Program>
+    </div>
+  </Section>
 
-	<Section
-		id="contact"
-		title="Contact Us"
-		titleSubText="We network with like minded NGOs, people’s movements and individuals on various issues"
-	>
-		<div
-			class="flex flex-col-reverse justify-center lg:flex-row lg:align-start gap-12 lg:gap-4"
-		>
-			<!-- outer-flex -->
-			<div class="mx-auto w-full max-w-[550px]">
-				<form action="#" method="POST">
-					<div class="mb-5">
-						<input
-							type="text"
-							name="name"
-							id="name"
-							placeholder="Full Name"
-							class="w-full rounded-md border border-slate-300 bg-white py-3 px-6 text-base font-medium text-slate-700 outline-none focus:border-tertiary focus:shadow-md"
-						/>
-					</div>
-					<div class="mb-5">
-						<input
-							type="email"
-							name="email"
-							id="email"
-							placeholder="Enter your email (example@domain.com)"
-							class="w-full rounded-md border border-slate-300 bg-white py-3 px-6 text-base font-medium text-slate-700 outline-none focus:border-tertiary focus:shadow-md"
-						/>
-					</div>
-					<div class="mb-5">
-						<input
-							type="text"
-							name="subject"
-							id="subject"
-							placeholder="Enter your subject"
-							class="w-full rounded-md border border-slate-300 bg-white py-3 px-6 text-base font-medium text-slate-700 outline-none focus:border-tertiary focus:shadow-md"
-						/>
-					</div>
-					<div class="mb-5">
-						<textarea
-							rows="4"
-							name="message"
-							id="message"
-							placeholder="Enter your message"
-							class="w-full resize-none rounded-md border border-slate-300 bg-white py-3 px-6 text-base font-medium text-slate-700 outline-none focus:border-tertiary focus:shadow-md"
-						></textarea>
-					</div>
-					<div>
-						<button
-							class="hover:shadow-form rounded-md bg-primary py-3 px-8 text-base font-semibold text-white outline-none"
-						>
-							Submit
-						</button>
-					</div>
-				</form>
-			</div>
-			<div class="flex flex-col gap-8">
-				<div class="flex flex-col md:flex-row justify-between gap-8">
-					<ContactCard title="Call Us" icon="fa-solid fa-phone">
-						<ol class="list-none text-sm">
-							<li class="pb-2">
-								<a href="tel:+919892494784">+91 9892494784</a>
-							</li>
-							<li>
-								<a href="tel:+9199637415885">+91 9637415885</a>
-							</li>
-						</ol>
-					</ContactCard>
-					<ContactCard title="Email" icon="fa-solid fa-envelope">
-						<ol class="list-none text-sm">
-							<li>
-								<a href="mailto:lokmangalghot@gmail.com">
-									lokmangalghot@gmail.com
-								</a>
-							</li>
-						</ol>
-					</ContactCard>
-				</div>
-				<div>
-					<ContactCard
-						title="Address"
-						icon="fa-solid fa-location-dot"
-					>
-						<ol class="list-none text-sm">
-							<li class="pb-2">Lokmangal Sanstha, Ghot. P.O.,</li>
-							<li class="pb-2">
-								Th. Chamorshi. Dt. Gadachiroli, 442-604;
-							</li>
-							<li class="pb-2">Maharashtra, India</li>
-							<li>Reg.No. F 3530/5/92 ( Ch )</li>
-						</ol>
-					</ContactCard>
-				</div>
-			</div>
-		</div>
-	</Section>
+  <Section
+    id="contact"
+    title="Contact Us"
+    titleSubText="We network with like minded NGOs, people’s movements and individuals on various issues"
+  >
+    <div
+      class="flex flex-col-reverse justify-center lg:flex-row lg:align-start gap-12 lg:gap-4"
+    >
+      <!-- outer-flex -->
+      <div class="mx-auto w-full max-w-[550px]">
+        <form action="#" method="POST">
+          <div class="mb-5">
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Full Name"
+              class="w-full rounded-md border border-slate-300 bg-white py-3 px-6 text-base font-medium text-slate-700 outline-none focus:border-tertiary focus:shadow-md"
+            />
+          </div>
+          <div class="mb-5">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your email (example@domain.com)"
+              class="w-full rounded-md border border-slate-300 bg-white py-3 px-6 text-base font-medium text-slate-700 outline-none focus:border-tertiary focus:shadow-md"
+            />
+          </div>
+          <div class="mb-5">
+            <input
+              type="text"
+              name="subject"
+              id="subject"
+              placeholder="Enter your subject"
+              class="w-full rounded-md border border-slate-300 bg-white py-3 px-6 text-base font-medium text-slate-700 outline-none focus:border-tertiary focus:shadow-md"
+            />
+          </div>
+          <div class="mb-5">
+            <textarea
+              rows="4"
+              name="message"
+              id="message"
+              placeholder="Enter your message"
+              class="w-full resize-none rounded-md border border-slate-300 bg-white py-3 px-6 text-base font-medium text-slate-700 outline-none focus:border-tertiary focus:shadow-md"
+            ></textarea>
+          </div>
+          <div>
+            <button
+              class="hover:shadow-form rounded-md bg-primary py-3 px-8 text-base font-semibold text-white outline-none"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="flex flex-col gap-8">
+        <div class="flex flex-col md:flex-row justify-between gap-8">
+          <ContactCard title="Call Us" icon="fa-solid fa-phone">
+            <ol class="list-none text-sm">
+              <li class="pb-2">
+                <a href="tel:+919892494784">+91 9892494784</a>
+              </li>
+              <li>
+                <a href="tel:+9199637415885">+91 9637415885</a>
+              </li>
+            </ol>
+          </ContactCard>
+          <ContactCard title="Email" icon="fa-solid fa-envelope">
+            <ol class="list-none text-sm">
+              <li>
+                <a href="mailto:lokmangalghot@gmail.com">
+                  lokmangalghot@gmail.com
+                </a>
+              </li>
+            </ol>
+          </ContactCard>
+        </div>
+        <div>
+          <ContactCard title="Address" icon="fa-solid fa-location-dot">
+            <ol class="list-none text-sm">
+              <li class="pb-2">Lokmangal Sanstha, Ghot. P.O.,</li>
+              <li class="pb-2">Th. Chamorshi. Dt. Gadachiroli, 442-604;</li>
+              <li class="pb-2">Maharashtra, India</li>
+              <li>Reg.No. F 3530/5/92 ( Ch )</li>
+            </ol>
+          </ContactCard>
+        </div>
+      </div>
+    </div>
+  </Section>
 
-	<!-- Map -->
-	<iframe
-		src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5852.907569536197!2d79.89010809364784!3d19.940787489377495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a2d1b66cd5b6ded%3A0xa638fba1afdfdd8b!2sChamorshi%2C%20Maharashtra%20442603!5e0!3m2!1sen!2sin!4v1688306925829!5m2!1sen!2sin"
-		class="mx-auto w-full h-96"
-		loading="lazy"
-		referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <!-- Map -->
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5852.907569536197!2d79.89010809364784!3d19.940787489377495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a2d1b66cd5b6ded%3A0xa638fba1afdfdd8b!2sChamorshi%2C%20Maharashtra%20442603!5e0!3m2!1sen!2sin!4v1688306925829!5m2!1sen!2sin"
+    class="mx-auto w-full h-96"
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-	<button id="scrollBtn" title="Go to top">
-		<i class="fa-solid fa-angles-up fa-md" style="color: #ffffff;"></i>
-	</button>
-	<Footer />
+  <button id="scrollBtn" title="Go to top">
+    <i class="fa-solid fa-angles-up fa-md" style="color: #ffffff;"></i>
+  </button>
+  <Footer />
 </Layout>
 
 <style>
-	#hero {
-		height: 70vh;
-		width: 100%;
-		@apply bg-secondary;
-	}
+  #hero {
+    height: 70vh;
+    width: 100%;
+    @apply bg-secondary;
+  }
 
-	.placeholder {
-		height: 100%;
-		width: 100%;
-		background-color: grey;
-	}
+  .placeholder {
+    height: 100%;
+    width: 100%;
+    background-color: grey;
+  }
 
-	.program-btn {
-		background-color: black;
-		color: white;
-		@apply rounded-md;
-	}
-	.program-btn.active {
-		@apply bg-primary;
-	}
-	@media screen and (max-width: 768px) {
-		.program-btn {
-			padding: 0.5rem 1.25rem;
-			margin-right: 0.75rem;
-			margin-bottom: 0.75rem;
-		}
-	}
-	@media screen and (min-width: 768px) {
-		.program-btn {
-			padding: 0.75rem 0rem;
-			margin: 0.75rem 1.5rem 0.75rem 0px;
-		}
-	}
+  .program-btn {
+    background-color: black;
+    color: white;
+    @apply rounded-md;
+  }
+  .program-btn.active {
+    @apply bg-primary;
+  }
+  @media screen and (max-width: 768px) {
+    .program-btn {
+      padding: 0.5rem 1.25rem;
+      margin-right: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .program-btn {
+      padding: 0.75rem 0rem;
+      margin: 0.75rem 1.5rem 0.75rem 0px;
+    }
+  }
 
-	#scrollBtn {
-		height: 40px;
-		width: 40px;
-		display: none;
-		position: fixed;
-		bottom: 20px;
-		right: 30px;
-		z-index: 99;
-		border: none;
-		outline: none;
-		color: white;
-		cursor: pointer;
-		padding: 0.5rem;
-		border-radius: 0.5rem;
-		transform: scaleY(0);
-		transition: all 0.4s ease-in-out;
-		@apply bg-primary;
-	}
-	#scrollBtn:hover {
-		background-color: #262626;
-	}
+  #scrollBtn {
+    height: 40px;
+    width: 40px;
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    transform: scaleY(0);
+    transition: all 0.4s ease-in-out;
+    @apply bg-primary;
+  }
+  #scrollBtn:hover {
+    background-color: #262626;
+  }
 </style>
 
-<script src="../scripts/"></script>
+<script src="../scripts/"></script>../assets/images/programs/1
