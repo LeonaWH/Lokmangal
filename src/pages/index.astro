@@ -63,8 +63,8 @@ const programFour = await Astro.glob("/src/assets/images/programs/4/*");
       </div>
       <div>
         <img
-          class="rounded-md shadow-md"
-          src={aboutImages[0].default}
+          class="rounded-md h-full mx-auto shadow-md"
+          src={aboutImages[2].default}
           alt="about image"
         />
       </div>
@@ -391,7 +391,7 @@ const programFour = await Astro.glob("/src/assets/images/programs/4/*");
     --hero-opacity: 0.5;
   }
   #hero {
-    height: 90vh;
+    height: 80vh;
     width: 100%;
     background: linear-gradient(
         rgba(0, 0, 0, var(--hero-opacity)),
