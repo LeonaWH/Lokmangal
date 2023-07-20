@@ -1,41 +1,43 @@
 ---
 export interface props {
-    id: string;
-    title: string;
-    titleSubText?: string;
-    className?: string;
+  id: string;
+  title: string;
+  titleSubText?: string;
+  className?: string;
 }
 
 const { id, title, titleSubText, className = "" } = Astro.props as props;
 ---
 
 <section
-    id={id}
-    class={"px-8 md:px-12 lg:px-24 py-14 scroll-mt-14 " + className}
+  id={id}
+  class={"px-8 md:px-12 lg:px-24 py-14 scroll-mt-14 " + className}
 >
-    <div class="container mx-auto">
-        <!-- Section Title -->
+  <div class="container mx-auto">
+    <!-- Section Title -->
+    {
+      title && (
         <div class="text-center pb-14">
-            <div class="flex items-center justify-center gap-4">
-            <h2 class="mb-2 text-3xl text-center font-bold">
-                {title}
-            </h2>
-            </div>
-            {titleSubText && <p class="mb-0">{titleSubText}</p>}
+          <div class="flex items-center justify-center gap-4">
+            <h2 class="mb-2 text-3xl text-center font-bold">{title}</h2>
+          </div>
+          {titleSubText && <p class="mb-0">{titleSubText}</p>}
         </div>
-        <!-- Content -->
-        <slot />
-    </div>
+      )
+    }
+    <!-- Content -->
+    <slot />
+  </div>
 </section>
 
 <style>
-   .flex.items-center.justify-center.gap-4:before,
-   .flex.items-center.justify-center.gap-4:after {
-        content: "";
-        width: 50px;
-        height: 2px;
-        display: inline-block;
-        margin-bottom: 10px;
-        @apply bg-primary;
-    }
+  .flex.items-center.justify-center.gap-4:before,
+  .flex.items-center.justify-center.gap-4:after {
+    content: "";
+    width: 50px;
+    height: 2px;
+    display: inline-block;
+    margin-bottom: 10px;
+    @apply bg-primary;
+  }
 </style>
