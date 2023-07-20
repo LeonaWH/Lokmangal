@@ -14,9 +14,9 @@ document.onscroll = () => {
             navLi.forEach(li => {
                 li.classList.remove("active");
                 if (id == "hero")
-                    document.querySelector(".nav-link a[href='#']")!.parentElement!.classList.add("active");
+                    document.querySelector(".nav-link a[href='/#']")!.parentElement!.classList.add("active");
                 else
-                    document.querySelector(`.nav-link a[href="#${id}"]`)!.parentElement!.classList.add("active");
+                    document.querySelector(`.nav-link a[href="/#${id}"]`)!.parentElement!.classList.add("active");
             });
     });
 }
