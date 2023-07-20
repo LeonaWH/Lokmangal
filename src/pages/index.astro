@@ -30,8 +30,6 @@ const programFour = await Astro.glob("/src/assets/images/programs/4/*");
 ---
 
 <Layout>
-  <Navbar />
-
   <div id="hero" class="flex flex-col justify-center">
     <div class="content text-center">
       <span class="text-gray-300 text-4xl">Welcome To</span>
@@ -386,69 +384,68 @@ const programFour = await Astro.glob("/src/assets/images/programs/4/*");
   <button id="scrollBtn" title="Go to top">
     <i class="fa-solid fa-angles-up fa-md" style="color: #ffffff;"></i>
   </button>
-  <Footer />
-
-  <style>
-    :root {
-      --hero-opacity: 0.5;
-    }
-    #hero {
-      height: 90vh;
-      width: 100%;
-      background: linear-gradient(
-          rgba(0, 0, 0, var(--hero-opacity)),
-          rgba(0, 0, 0, var(--hero-opacity))
-        ),
-        url(../assets/images/hero.webp);
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-    }
-
-    .program-btn {
-      background-color: black;
-      color: white;
-      @apply rounded-md;
-    }
-    .program-btn.active {
-      @apply bg-primary;
-    }
-    @media screen and (max-width: 768px) {
-      .program-btn {
-        padding: 0.5rem 1.25rem;
-        margin-right: 0.75rem;
-        margin-bottom: 0.75rem;
-      }
-    }
-    @media screen and (min-width: 768px) {
-      .program-btn {
-        padding: 0.75rem 0rem;
-        margin: 0.75rem 1.5rem 0.75rem 0px;
-      }
-    }
-
-    #scrollBtn {
-      height: 40px;
-      width: 40px;
-      display: none;
-      position: fixed;
-      bottom: 20px;
-      right: 30px;
-      z-index: 99;
-      border: none;
-      outline: none;
-      color: white;
-      cursor: pointer;
-      padding: 0.5rem;
-      border-radius: 0.5rem;
-      transform: scaleY(0);
-      transition: all 0.4s ease-in-out;
-      @apply bg-primary;
-    }
-    #scrollBtn:hover {
-      background-color: #262626;
-    }
-  </style>
-
-  <script src="../scripts/"></script>
 </Layout>
+
+<style>
+  :root {
+    --hero-opacity: 0.5;
+  }
+  #hero {
+    height: 90vh;
+    width: 100%;
+    background: linear-gradient(
+        rgba(0, 0, 0, var(--hero-opacity)),
+        rgba(0, 0, 0, var(--hero-opacity))
+      ),
+      url(../assets/images/hero.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .program-btn {
+    background-color: black;
+    color: white;
+    @apply rounded-md;
+  }
+  .program-btn.active {
+    @apply bg-primary;
+  }
+  @media screen and (max-width: 768px) {
+    .program-btn {
+      padding: 0.5rem 1.25rem;
+      margin-right: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .program-btn {
+      padding: 0.75rem 0rem;
+      margin: 0.75rem 1.5rem 0.75rem 0px;
+    }
+  }
+
+  #scrollBtn {
+    height: 40px;
+    width: 40px;
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    transform: scaleY(0);
+    transition: all 0.4s ease-in-out;
+    @apply bg-primary;
+  }
+  #scrollBtn:hover {
+    background-color: #262626;
+  }
+</style>
+
+<script src="../scripts/"></script>
