@@ -6,24 +6,30 @@ const currentPage = Astro.url;
 ---
 
 <>
-  <div
-    class="flex justify-center md:justify-between bg-primary text-white px-7 md:px-14 py-3"
-  >
-    <div>
-      Donate to our cause...
-      <a class="underline" href="/donations">Donate Now</a>
-    </div>
-    <div class="hidden md:flex">
-      <div class="flex items-center border-r border-gray-200 pr-3 mr-3">
-        <img class="h-4 w-4 mr-2 invert" src={Mail} alt="mail icon" />
-        <a href="mailto:lokmangalghot@gmail.com">lokmangalghot@gmail.com</a>
+  <!-- Donation Top Bar -->
+  {
+    currentPage.pathname !== "/donations" && (
+      <div class="flex justify-center md:justify-between bg-primary text-white px-7 md:px-14 py-3">
+        <div>
+          Donate to our cause...
+          <a class="underline" href="/donations">
+            Donate Now
+          </a>
+        </div>
+        <div class="hidden md:flex">
+          <div class="flex items-center border-r border-gray-200 pr-3 mr-3">
+            <img class="h-4 w-4 mr-2 invert" src={Mail} alt="mail icon" />
+            <a href="mailto:lokmangalghot@gmail.com">lokmangalghot@gmail.com</a>
+          </div>
+          <div class="flex items-center border-r border-gray-200 pr-3">
+            <img class="h-4 w-4 mr-2 invert" src={Phone} alt="contact icon" />
+            <a href="tel:+919892494784">+91 9892494784</a>
+          </div>
+        </div>
       </div>
-      <div class="flex items-center border-r border-gray-200 pr-3">
-        <img class="h-4 w-4 mr-2 invert" src={Phone} alt="contact icon" />
-        <a href="tel:+919892494784">+91 9892494784</a>
-      </div>
-    </div>
-  </div>
+    )
+  }
+  <!-- Navbar -->
   <header
     id="navbar"
     class="sticky z-50 w-full top-0 lg:flex justify-between px-7 md:px-14 py-3 shadow-lg bg-white"
