@@ -1,16 +1,22 @@
 ---
 interface props {
-    title: string;
-    icon: string;
+  title: string;
+  icon: string;
+  className?: string;
+  subtext?: string;
 }
-const { title, icon } = Astro.props as props;
+const { title, icon, className, subtext } = Astro.props as props;
 ---
 
 <div
-    class="flex flex-col justify-start bg-secondary shadow-lg w-full px-10 py-6 rounded-md"
+  class={"flex flex-col justify-start bg-secondary shadow-lg mb-10 md:mb-0 px-10 py-6 rounded-md " +
+    className}
 >
-    <!-- <slot name="icon" /> -->
-    <i class={"text-primary mb-4 text-4xl " + icon}></i>
-    <h3 class="font-semibold text-xl mb-3">{title}</h3>
-    <slot />
+  <!-- <slot name="icon" /> -->
+  <div class="flex items-center mb-2">
+    <i class={"text-primary mr-4 text-4xl " + icon}></i>
+    <h3 class="font-semibold text-xl">{title}</h3>
+  </div>
+  <slot name="subtext" />
+  <slot />
 </div>
