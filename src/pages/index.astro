@@ -391,7 +391,7 @@ const programFour = await Astro.glob("/src/assets/images/programs/4/*");
     --hero-opacity: 0.5;
   }
   #hero {
-    height: 80vh;
+    height: 70vh;
     width: 100%;
     background: linear-gradient(
         rgba(0, 0, 0, var(--hero-opacity)),
@@ -401,6 +401,7 @@ const programFour = await Astro.glob("/src/assets/images/programs/4/*");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
   }
 
   .program-btn {
