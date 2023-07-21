@@ -33,13 +33,14 @@ const programFour = await Astro.glob("/src/assets/images/programs/4/*");
   <div id="hero" class="flex flex-col justify-center">
     <div class="content text-center">
       <span class="text-gray-300 text-4xl">Welcome To</span>
-      <div class="text-4xl md:text-6xl mt-10 md:mt-16">
-        <h1 class="mb-2 text-primary uppercase tracking-wide font-bold">
+      <div class="text-5xl md:text-7xl mt-8 md:mt-12">
+        <h1
+          class="mb-2 text-primary uppercase tracking-wide font-bold"
+          style={{ fontFamily: "'Rubik', sans-serif" }}
+        >
           Lokmangal
         </h1>
-        <span class="text-gray-200 font-thin tracking-widest">
-          Sanstha Ghot
-        </span>
+        <span class="text-gray-200 font-thin"> Sanstha Ghot</span>
       </div>
     </div>
   </div>
@@ -159,7 +160,7 @@ const programFour = await Astro.glob("/src/assets/images/programs/4/*");
         id="prog-1"
         title="Mathoshri Swadhar Greh for women in distress:"
       >
-        <ol slot="content">
+        <ul slot="content" class="list-disc ml-4">
           <li>
             Provide shelter and support to women who are bearing the brunt of
             social, moral and family problems and violence.
@@ -175,7 +176,7 @@ const programFour = await Astro.glob("/src/assets/images/programs/4/*");
             The inmates of this home are provided all the facilities free of
             cost.
           </li>
-        </ol>
+        </ul>
         <Carousel photos={programOne.map((program) => program.default)} />
       </Program>
 
@@ -189,7 +190,7 @@ const programFour = await Astro.glob("/src/assets/images/programs/4/*");
             To prepare the less privileged children as responsible future
             citizens.
           </p>
-          <ol>
+          <ul class="ml-4 list-disc">
             <li>
               A home away from home children- orphan, nobody to support, in
               moral danger- who are in need of care and protection.
@@ -204,7 +205,7 @@ const programFour = await Astro.glob("/src/assets/images/programs/4/*");
               programs for personality development and social awareness,
               training in Karate, are part of this home.
             </li>
-          </ol>
+          </ul>
           <p>
             Sponsored by women and child welfare Dept. state of Maharashtra.
           </p>
@@ -214,7 +215,7 @@ const programFour = await Astro.glob("/src/assets/images/programs/4/*");
 
       <Program id="prog-3" title="Legal Aid" className="hidden opacity-0">
         <div slot="content">
-          <ol>
+          <ul class="ml-4 list-disc">
             <li>
               The Centre stand by women to fight against atrocities and violence
               against them and to fight for their rights.
@@ -227,7 +228,7 @@ const programFour = await Astro.glob("/src/assets/images/programs/4/*");
               Provide legal awareness and education to people about day to day
               useful and basic laws.
             </li>
-          </ol>
+          </ul>
           <p>
             Bring to the compromising table the matrimonial disputes and settle
             them with the consent of both the parties.
@@ -249,7 +250,7 @@ const programFour = await Astro.glob("/src/assets/images/programs/4/*");
             organization works to create awareness, motivation and capacity
             building program to people at grass root level.
           </p>
-          <ol>
+          <ul class="ml-4 list-disc">
             <li>
               Through women self-help groups and panchayati raj programs develop
               capacities of women and empower them.
@@ -275,7 +276,7 @@ const programFour = await Astro.glob("/src/assets/images/programs/4/*");
               To encourage the traditional and proper use of home remedies and
               herbal medicines.
             </li>
-          </ol>
+          </ul>
         </div>
         <Carousel photos={programFour.map((program) => program.default)} />
       </Program>
