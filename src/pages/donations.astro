@@ -13,20 +13,32 @@ import Section from "../components/Section.astro";
       voluptate assumenda dignissimos ab praesentium, voluptas nisi libero error
       eaque autem, nam alias at aut magni laborum? A, quas nobis!
     </p>
-    <div class="lg:w-1/2 mx-auto mt-10 px-10 py-5 border-2 shadow-md">
-      <h3 class="text-xl font-semibold">Bank Details</h3>
+    <div class="lg:w-2/3 mx-auto mt-10 px-10 py-5 border-2 shadow-2xl">
+      <h3 class="text-xl font-semibold mb-6">Bank Account Details</h3>
       <table class="w-full text-left">
         <tr>
           <td>Bank Name</td>
-          <td>Lorem, ipsum</td>
+          <td class="font-bold">Bank of Maharashtra</td>
         </tr>
         <tr>
           <td>Branch</td>
-          <td>GHOT(629)</td>
+          <td>GHOT</td>
+        </tr>
+        <tr>
+          <td>Branch Code</td>
+          <td>629</td>
         </tr>
         <tr>
           <td>Branch Address</td>
-          <td><address>V.S.T.G.M. BLDG, GHOT, CHAMORSHI</address></td>
+          <td>
+            <address>
+              V.S.T.G.M. BLDG, GHOT, CHAMORSHI, Mahrashtra - 442604
+            </address>
+          </td>
+        </tr>
+        <tr>
+          <td>Branch Contact</td>
+          <td class="text-primary">18002334526 / 18001022636</td>
         </tr>
         <tr>
           <td>MICR Code</td>
@@ -52,7 +64,37 @@ import Section from "../components/Section.astro";
             AVILA THARAYIL SR
           </td>
         </tr>
+        <tr>
+          <td>Beneficiary Phone</td>
+          <td class="text-primary">+91 9892494784<br />+91 9637415885</td>
+        </tr>
       </table>
     </div>
   </Section>
 </Layout>
+
+<style>
+  h3::before,
+  h3::after {
+    content: "";
+    /* width: 35px; */
+    height: 2px;
+    display: inline-block;
+    margin-bottom: 6px;
+    @apply bg-primary md:w-9;
+  }
+  h3::before {
+    @apply mr-3;
+  }
+  h3::after {
+    @apply ml-3;
+  }
+  table tr td {
+    @apply pb-2;
+  }
+  table tr td:first-child {
+    @apply pr-2 w-1/3;
+  }
+  table tr td:last-child {
+  }
+</style>
