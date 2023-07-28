@@ -1,0 +1,27 @@
+---
+interface props {
+  photos: Array<string>;
+}
+const { photos } = Astro.props as props;
+---
+<style>
+  
+  img:nth-of-type(1),
+  img:nth-of-type(2),
+  img:nth-of-type(4) {
+    @apply md:col-span-2;
+  }
+  img:nth-of-type(6) {
+      @apply md:hidden;
+    }
+</style>
+
+<div
+  class="grid gap-2.5 w-full min-[450px]:grid-cols-2 md:grid-cols-4 md:grid-rows-2 md:max-h-96 md:max-w-md"
+>
+  {
+    photos.map((photo) => (
+      <img src={photo} alt="image" class="h-36 object-cover w-full min-[450px]:h-full rounded" />
+    ))
+  }
+</div>

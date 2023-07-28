@@ -7,6 +7,7 @@ import Objective from "../components/Objective.astro";
 import Program from "../components/Program.astro";
 import Carousel from "../components/Carousel.astro";
 import ContactCard from "../components/ContactCard.astro";
+import Masonry from "../components/Masonry.astro";
 
 // icons
 import {
@@ -48,9 +49,9 @@ const programFour = await Astro.glob("/src/assets/images/programs/4/*");
     title="About Us"
     titleSubText="Empowering Lives, Inspiring Change"
   >
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
       <div>
-        <p>
+        <p class="xl:text-lg 2xl:text-2xl">
           Lokmangal stands for the total development of people. Lokmangal is a
           non-profitable social organization born out of the concept of holistic
           health of women and the comprehensive development of the rural people
@@ -60,13 +61,9 @@ const programFour = await Astro.glob("/src/assets/images/programs/4/*");
           diversity are the basic principles the organization upholds.
         </p>
       </div>
-      <div>
-        <img
-          class="rounded-md h-full mx-auto shadow-md"
-          src={aboutImages[2].default}
-          alt="about image"
-        />
-      </div>
+      <Masonry
+        photos={aboutImages.map((photo) => photo.default)}
+      />
       <AboutCard title="Vision" icon="fa-solid fa-eye">
         <p class="text-left">
           A prosperous community where women enjoy holistic health and every
