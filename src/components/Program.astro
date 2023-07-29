@@ -1,10 +1,10 @@
 ---
-export interface props {
+export interface Props {
     title: string;
     id: string;
     className?: string;
 }
-const { title, id, className = "" } = Astro.props as props;
+const { title, id, className = "" } = Astro.props as Props;
 ---
 
 <div

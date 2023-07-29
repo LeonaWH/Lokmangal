@@ -31,7 +31,10 @@ const programFour = await Astro.glob("/src/assets/images/programs/4/*");
 <Layout>
   <div id="hero" class="flex flex-col justify-center">
     <div class="content text-center">
-      <span class="text-gray-300 text-4xl"style={{ fontFamily: "'Philosopher', sans-serif" }}>Welcome To</span>
+      <span
+        class="text-gray-300 text-4xl"
+        style={{ fontFamily: "'Philosopher', sans-serif" }}>Welcome To</span
+      >
       <div class="text-5xl md:text-7xl mt-8 md:mt-12">
         <h1
           class="mb-2 text-primary uppercase tracking-wider font-bold"
@@ -39,7 +42,12 @@ const programFour = await Astro.glob("/src/assets/images/programs/4/*");
         >
           Lokmangal
         </h1>
-        <span class="text-gray-200 font-regular tracking-widest text-5xl md:text-7xl leading-tight" style={{ fontFamily: "'Philosopher', sans-serif"}}> sanstha ghot</span>
+        <span
+          class="text-gray-200 font-regular tracking-widest text-5xl md:text-7xl leading-tight"
+          style={{ fontFamily: "'Philosopher', sans-serif" }}
+        >
+          sanstha ghot</span
+        >
       </div>
     </div>
   </div>
@@ -61,9 +69,7 @@ const programFour = await Astro.glob("/src/assets/images/programs/4/*");
           diversity are the basic principles the organization upholds.
         </p>
       </div>
-      <Masonry
-        photos={aboutImages.map((photo) => photo.default)}
-      />
+      <Masonry photos={aboutImages.map((photo) => photo.default)} />
       <AboutCard title="Vision" icon="fa-solid fa-eye">
         <p class="text-left">
           A prosperous community where women enjoy holistic health and every

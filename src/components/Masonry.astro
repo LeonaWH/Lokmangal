@@ -1,19 +1,19 @@
 ---
-interface props {
+interface Props {
   photos: Array<string>;
 }
-const { photos } = Astro.props as props;
+const { photos } = Astro.props as Props;
 ---
+
 <style>
-  
   img:nth-of-type(1),
   img:nth-of-type(2),
   img:nth-of-type(4) {
     @apply md:col-span-2;
   }
   img:nth-of-type(6) {
-      @apply md:hidden;
-    }
+    @apply md:hidden;
+  }
 </style>
 
 <div
@@ -21,7 +21,11 @@ const { photos } = Astro.props as props;
 >
   {
     photos.map((photo) => (
-      <img src={photo} alt="image" class="h-36 object-cover w-full min-[450px]:h-full rounded" />
+      <img
+        src={photo}
+        alt="image"
+        class="h-36 object-cover w-full min-[450px]:h-full rounded"
+      />
     ))
   }
 </div>

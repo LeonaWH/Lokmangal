@@ -1,9 +1,9 @@
 ---
-interface props {
+export interface Props {
   content: string;
   icon: string;
 }
-const { content, icon } = Astro.props as props;
+const { content, icon } = Astro.props as Props;
 ---
 
 <div

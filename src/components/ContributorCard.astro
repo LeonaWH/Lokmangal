@@ -1,0 +1,27 @@
+---
+export interface Props {
+    name: string;
+    img: string;
+    description: string;
+    instagram?: string;
+    facebook?: string;
+    twitter?: string;
+    linkedin?: string;
+    github?: string;
+    website?: string;
+}
+
+const {
+    name,
+    img,
+    description,
+    instagram,
+    facebook,
+    twitter,
+    linkedin,
+    github,
+    website,
+} = Astro.props as Props;
+---
+
+<div></div>

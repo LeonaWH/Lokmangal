@@ -1,12 +1,12 @@
 ---
-export interface props {
+export interface Props {
   id: string;
   title: string;
   titleSubText?: string;
   className?: string;
 }
 
-const { id, title, titleSubText, className = "" } = Astro.props as props;
+const { id, title, titleSubText, className = "" } = Astro.props as Props;
 ---
 
 <section
