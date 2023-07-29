@@ -1,4 +1,7 @@
 ---
+import sid from "../assets/images/contributors/Sid.png";
+import socialIcons from "../assets/icons/socials";
+
 export interface Props {
     name: string;
     img: string;
@@ -9,19 +12,73 @@ export interface Props {
     linkedin?: string;
     github?: string;
     website?: string;
+    class?: string;
 }
 
-const {
-    name,
-    img,
-    description,
-    instagram,
-    facebook,
-    twitter,
-    linkedin,
-    github,
-    website,
-} = Astro.props as Props;
+const props = Astro.props as Props;
 ---
 
-<div></div>
+<div
+    class={"grid grid-flow-row md:grid-flow-col md:gap-x-5 w-fit bg-secondary" +
+        (" " + props.class)}
+>
+    <img class="border-4 h-fit" src={sid} alt={props.name + " image"} />
+    <div>
+        <h3>{props.name}</h3>
+        <p>{props.description}</p>
+        <div class="flex">
+            {
+                props.instagram && (
+                    <a
+                        class="social-link"
+                        href={props.instagram}
+                        target="_blank"
+                    >
+                        <socialIcons.instagram />
+                    </a>
+                )
+            }
+            {
+                props.facebook && (
+                    <a
+                        class="social-link"
+                        href={props.facebook}
+                        target="_blank"
+                    >
+                        <socialIcons.facebook />
+                    </a>
+                )
+            }
+            {
+                props.twitter && (
+                    <a class="social-link" href={props.twitter} target="_blank">
+                        <socialIcons.twitter />
+                    </a>
+                )
+            }
+            {
+                props.linkedin && (
+                    <a
+                        class="social-link"
+                        href={props.linkedin}
+                        target="_blank"
+                    >
+                        <socialIcons.linkedin />
+                    </a>
+                )
+            }
+            {
+                props.github && (
+                    <a class="social-link" href={props.github} target="_blank">
+                        <socialIcons.github />
+                    </a>
+                )
+            }
+        </div>
+    </div>
+</div>
+
+<style>
+    .social-link {
+    }
+</style>
