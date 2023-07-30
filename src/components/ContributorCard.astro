@@ -1,84 +1,97 @@
 ---
-import sid from "../assets/images/contributors/Sid.png";
 import socialIcons from "../assets/icons/socials";
 
 export interface Props {
-    name: string;
-    img: string;
-    description: string;
-    instagram?: string;
-    facebook?: string;
-    twitter?: string;
-    linkedin?: string;
-    github?: string;
-    website?: string;
-    class?: string;
+  name: string;
+  img: string;
+  description: string;
+  instagram?: string;
+  facebook?: string;
+  twitter?: string;
+  linkedin?: string;
+  github?: string;
+  website?: string;
+  class?: string;
+  redirect?: string;
 }
 
 const props = Astro.props as Props;
+if (props.redirect == null) props.redirect = props.github;
+console.log(props.redirect);
 ---
 
 <div
-    class={"grid grid-flow-row md:grid-flow-col md:gap-x-5 w-fit bg-secondary" +
-        (" " + props.class)}
+  class="contributor flex flex-col items-center mb-16 relative xl:h-80 transition-all duration-150 hover:-translate-y-2 hover:shadow-2xl"
 >
-    <img class="border-4 h-fit" src={sid} alt={props.name + " image"} />
-    <div>
-        <h3>{props.name}</h3>
-        <p>{props.description}</p>
-        <div class="flex">
-            {
-                props.instagram && (
-                    <a
-                        class="social-link"
-                        href={props.instagram}
-                        target="_blank"
-                    >
-                        <socialIcons.instagram />
-                    </a>
-                )
-            }
-            {
-                props.facebook && (
-                    <a
-                        class="social-link"
-                        href={props.facebook}
-                        target="_blank"
-                    >
-                        <socialIcons.facebook />
-                    </a>
-                )
-            }
-            {
-                props.twitter && (
-                    <a class="social-link" href={props.twitter} target="_blank">
-                        <socialIcons.twitter />
-                    </a>
-                )
-            }
-            {
-                props.linkedin && (
-                    <a
-                        class="social-link"
-                        href={props.linkedin}
-                        target="_blank"
-                    >
-                        <socialIcons.linkedin />
-                    </a>
-                )
-            }
-            {
-                props.github && (
-                    <a class="social-link" href={props.github} target="_blank">
-                        <socialIcons.github />
-                    </a>
-                )
-            }
-        </div>
+  <a href={props.redirect} target="_blank" class="h-full">
+    <img class="h-full" src={props.img} alt={props.name + " image"} />
+  </a>
+  <div
+    class="bg-white shadow-md w-[80%] py-2 px-2 text-center absolute -bottom-10 rounded-sm"
+  >
+    <a href={props.redirect} target="_blank">
+      <h3
+        class="mb-1.5 text-lg font-semibold hover:text-primary transition-colors duration-75"
+      >
+        {props.name}
+      </h3>
+    </a>
+    <div class="flex justify-center text-sm">
+      {
+        props.instagram && (
+          <a class="social-link" href={props.instagram} target="_blank">
+            <img src={socialIcons.instagram} alt="" srcset="" />
+          </a>
+        )
+      }
+      {
+        props.facebook && (
+          <a class="social-link" href={props.facebook} target="_blank">
+            <img src={socialIcons.facebook} alt="" srcset="" />
+          </a>
+        )
+      }
+      {
+        props.twitter && (
+          <a class="social-link" href={props.twitter} target="_blank">
+            <img src={socialIcons.twitter} alt="" srcset="" />
+          </a>
+        )
+      }
+      {
+        props.linkedin && (
+          <a class="social-link" href={props.linkedin} target="_blank">
+            <img src={socialIcons.linkedin} alt="" srcset="" />
+          </a>
+        )
+      }
+      {
+        props.github && (
+          <a class="social-link" href={props.github} target="_blank">
+            <img src={socialIcons.github} alt="" srcset="" />
+          </a>
+        )
+      }
+      {
+        props.website && (
+          <a class="social-link" href={props.website} target="_blank">
+            <img src={socialIcons.globe} alt="" srcset="" />
+          </a>
+        )
+      }
     </div>
+  </div>
 </div>
 
 <style>
-    .social-link {
-    }
+  .contributor:hover h3 {
+    @apply text-primary;
+  }
+  h3 {
+    font-family: "Poppins", sans-serif;
+  }
+  .social-link img {
+    height: 20px;
+    @apply mr-1.5;
+  }
 </style>

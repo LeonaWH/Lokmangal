@@ -2,36 +2,43 @@
 import Layout from "../layouts/Layout.astro";
 import Section from "../components/Section.astro";
 import ContributorCard from "../components/ContributorCard.astro";
+
+// Developer Photos
+// preffered ratio 3:4
+import sid from "../assets/images/contributors/Sid.png";
+import alston from "../assets/images/contributors/Alston_Fernandes.jpg";
 ---
 
 <Layout>
-    <Section id="contributors" title="Website Contributors">
-        <div class="grid grid-flow-row md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <ContributorCard
-                name="Siddharth Dhaigude"
-                img="https://avatars.githubusercontent.com/u/29686102?v=4"
-                description="Hey there, this is a very short about me"
-                github="https://github.com/sd8capricon"
-                linkedin="https://www.linkedin.com/in/sdhaigude/"
-                instagram="https://instagram.com/sid_d813?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D"
-            />
-            <ContributorCard
-                name="Siddharth Dhaigude2"
-                img="https://avatars.githubusercontent.com/u/29686102?v=4"
-                description="Hey there, this is a very short about me"
-                github="https://github.com/sd8capricon"
-                linkedin="https://www.linkedin.com/in/sdhaigude/"
-                instagram="https://instagram.com/sid_d813?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D"
-            />
-            <ContributorCard
-                class="md:col-span-2 lg:col-span-1 mx-auto"
-                name="Siddharth Dhaigude3"
-                img="https://avatars.githubusercontent.com/u/29686102?v=4"
-                description="Hey there, this is a very short about me"
-                github="https://github.com/sd8capricon"
-                linkedin="https://www.linkedin.com/in/sdhaigude/"
-                instagram="https://instagram.com/sid_d813?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D"
-            />
-        </div>
-    </Section>
+  <Section id="contributors" title="Website Contributors">
+    <div class="md:flex justify-center gap-10 lg:gap-28">
+      <ContributorCard
+        name="Leona Varghese"
+        img={alston}
+        description="Hey there, this is a very short about me"
+        github="https://github.com/sd8capricon"
+        linkedin="https://www.linkedin.com/in/sdhaigude/"
+        instagram="https://instagram.com/sid_d813?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D"
+        website="https://siddharthdhaigude.tech"
+      />
+      <ContributorCard
+        name="Siddharth Dhaigude"
+        img={alston}
+        description="Hey there, this is a very short about me"
+        github="https://github.com/sd8capricon"
+        linkedin="https://www.linkedin.com/in/sdhaigude/"
+        instagram="https://instagram.com/sid_d813?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D"
+        website="https://siddharthdhaigude.tech"
+      />
+      <ContributorCard
+        name="Alston Fernandes"
+        img={alston}
+        description="Hey there, this is a very short about me"
+        github="https://github.com/sd8capricon"
+        linkedin="https://www.linkedin.com/in/sdhaigude/"
+        instagram="https://instagram.com/sid_d813?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D"
+        website="https://siddharthdhaigude.tech"
+      />
+    </div>
+  </Section>
 </Layout>
