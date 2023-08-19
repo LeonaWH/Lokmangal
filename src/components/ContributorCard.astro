@@ -37,6 +37,20 @@ if (props.redirect == null) props.redirect = props.github;
     </a>
     <div class="flex justify-center text-sm">
       {
+        props.linkedin && (
+          <a class="social-link" href={props.linkedin} target="_blank">
+            <img src={socialIcons.linkedin} alt="" srcset="" />
+          </a>
+        )
+      }
+      {
+        props.github && (
+          <a class="social-link" href={props.github} target="_blank">
+            <img src={socialIcons.github} alt="" srcset="" />
+          </a>
+        )
+      }
+      {
         props.instagram && (
           <a class="social-link" href={props.instagram} target="_blank">
             <img src={socialIcons.instagram} alt="" srcset="" />
@@ -54,20 +68,6 @@ if (props.redirect == null) props.redirect = props.github;
         props.twitter && (
           <a class="social-link" href={props.twitter} target="_blank">
             <img src={socialIcons.twitter} alt="" srcset="" />
-          </a>
-        )
-      }
-      {
-        props.linkedin && (
-          <a class="social-link" href={props.linkedin} target="_blank">
-            <img src={socialIcons.linkedin} alt="" srcset="" />
-          </a>
-        )
-      }
-      {
-        props.github && (
-          <a class="social-link" href={props.github} target="_blank">
-            <img src={socialIcons.github} alt="" srcset="" />
           </a>
         )
       }
