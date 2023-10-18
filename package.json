@@ -5,12 +5,13 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "expose":"astro dev --host",
+    "expose": "astro dev --host",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.0.1",
     "@astrojs/tailwind": "^4.0.0",
     "astro": "^2.7.2",
     "swiper": "^10.0.4",
